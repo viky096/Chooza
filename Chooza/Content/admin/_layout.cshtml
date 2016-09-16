@@ -465,12 +465,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 	@System.Web.Optimization.Scripts.Render("~/Content/admin/assets/bootstrap-daterangepicker/daterangepicker.js")
 	@System.Web.Optimization.Scripts.Render("~/Content/admin/assets/js/app.js")				
-	<script>
-		jQuery(document).ready(function() {		
-			App.setPage("index");  // set current page
-			App.init(); // init the rest of plugins and elements
-		});
-	</script>
+	@System.Web.Optimization.Scripts.Render("<script>jQuery(document).ready(function() {App.setPage('index');App.init();});</script>")
         
 	<!-- END JAVASCRIPTS -->
 </body>
