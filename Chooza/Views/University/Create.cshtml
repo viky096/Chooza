@@ -1,0 +1,67 @@
+﻿@model Models.DatabaseModels.UniversityViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Content/admin/_layout.cshtml";
+}
+
+<br />
+
+<div class="add_margin">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Add University</legend>
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Name, new { @class = "large m-wrap" } )
+            
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.City)
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.City,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.City)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.Introduction)
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(model => model.Introduction,new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
+            @Html.ValidationMessageFor(model => model.Introduction)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.Admission_details)
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(model => model.Admission_details,new { @class = "span12 wysihtml5 m-wrap", @rows="6" })
+            @Html.ValidationMessageFor(model => model.Admission_details)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.ImageData)
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.ImageData,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.ImageData)
+        </div>
+
+        <p>
+            <input type="submit" value="Add" class="btn blue" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+    </div>

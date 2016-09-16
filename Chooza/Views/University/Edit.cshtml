@@ -1,0 +1,68 @@
+﻿@model Models.DatabaseModels.UniversityViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+<div class="add_margin">
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Edit</legend>
+
+        @Html.HiddenFor(university =>university.Id)
+
+        <div class="control-label">
+            @Html.LabelFor(university => university.Name)
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(university=>university.Name, new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(university => university.Name)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(university => university.City)
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(university=> university.City, new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(university => university.City)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(university => university.Introduction)
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(university => university.Introduction, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
+            @Html.ValidationMessageFor(university => university.Introduction)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(university=> university.Admission_details)
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(university => university.Admission_details, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
+            @Html.ValidationMessageFor(university => university.Admission_details)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(university => university.ImageData)
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(university => university.ImageData, new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(university =>university.ImageData)
+        </div>
+
+         <p>
+            <input type="submit" value="Save" / class="btn blue">
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+</div>
+

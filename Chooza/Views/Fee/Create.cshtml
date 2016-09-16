@@ -1,0 +1,42 @@
+﻿@model EntityProvider.Fee_Structure
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+<div class="add_margin">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <br />
+    <fieldset>
+        <legend>Add Fee Structure</legend>
+
+       
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.First_Sem_Fee)
+        </div>
+        <div class="controls">
+            @Html>TextBoxFor(model => model.First_Sem_Fee)
+            @Html.ValidationMessageFor(model => model.First_Sem_Fee)
+        </div>
+
+        <div class="control-label">
+             @Html.LabelFor(model => model.Second_Onwards_Fee)
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Second_Onwards_Fee,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.Second_Onwards_Fee)
+        </div>
+
+       <p>
+            <input type="submit" value="Add" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+</div>

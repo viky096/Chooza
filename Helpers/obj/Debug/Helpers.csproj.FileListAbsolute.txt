@@ -1,0 +1,5 @@
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Helpers\bin\Debug\Helpers.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Helpers\bin\Debug\Helpers.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Helpers\obj\Debug\Helpers.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Helpers\obj\Debug\Helpers.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\Helpers\obj\Debug\Helpers.csprojResolveAssemblyReference.cache

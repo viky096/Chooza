@@ -1,0 +1,4 @@
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Catalog.cs\bin\Debug\Catalog.cs.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Catalog.cs\bin\Debug\Catalog.cs.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Catalog.cs\obj\Debug\Catalog.cs.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Catalog.cs\obj\Debug\Catalog.cs.pdb

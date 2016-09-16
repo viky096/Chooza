@@ -1,0 +1,10 @@
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\bin\Debug\MembershipProvider.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\bin\Debug\MembershipProvider.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\obj\Debug\MembershipProvider.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\obj\Debug\MembershipProvider.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\bin\Debug\MembershipProvider.dll.config
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\bin\Debug\EntityFramework.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\bin\Debug\EntityFramework.xml
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\MembershipProvider\obj\Debug\MembershipProvider.csprojResolveAssemblyReference.cache

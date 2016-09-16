@@ -1,0 +1,54 @@
+﻿@model Models.DatabaseModels.ProgramViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+<br />
+<div class="add_margin">
+
+<fieldset>
+    <legend>Program Details</legend>
+
+    <div class="display-label">
+         <b>Project Name</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(program => program.Name)
+    </div>
+
+    <div class="display-label">
+         <b>Skills Needed</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(program => program.SkillsNeeded)
+    </div>
+
+    <div class="display-label">
+        <b>Education Scope</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(program => program.EducationScope)
+    </div>
+
+    <div class="display-label">
+         <b>Employment Scope</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(program=> program.EmploymentScope)
+    </div>
+
+    <div class="display-label">
+         <b>Program Overview</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(program => program.ProgramOverview)
+    </div>
+
+    
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+</div>

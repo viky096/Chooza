@@ -1,0 +1,16 @@
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\EntityProvider.dll.config
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\EntityProvider.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\EntityProvider.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\EntityFramework.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\EntityFramework.xml
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\obj\Debug\EntityProvider.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\obj\Debug\EntityProvider.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\obj\Debug\EntityProvider.csprojResolveAssemblyReference.cache
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\Catalog.cs.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\Helpers.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\Models.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\Catalog.cs.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\Helpers.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\EntityProvider\bin\Debug\Models.pdb

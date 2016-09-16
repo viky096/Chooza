@@ -1,0 +1,5 @@
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Models\bin\Debug\Models.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Models\bin\Debug\Models.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Models\obj\Debug\Models.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\Chooza\Models\obj\Debug\Models.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

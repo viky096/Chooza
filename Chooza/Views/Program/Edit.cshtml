@@ -1,0 +1,70 @@
+﻿@model Models.DatabaseModels.ProgramViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+<div class="add_margin">
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Edit Program</legend>
+
+        @Html.HiddenFor(program => program.Id)
+
+        <div class="control-label">
+            @Html.LabelFor(program => program.Name)
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(program => program.Name, new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(program => program.Name)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(program => program.SkillsNeeded)
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(program => program.SkillsNeeded, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
+            @Html.ValidationMessageFor(program => program.SkillsNeeded)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(program => program.EducationScope)
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(program => program.EducationScope, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
+            @Html.ValidationMessageFor(program => program.EducationScope)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(program => program.EmploymentScope)
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(program => program.EmploymentScope, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
+            @Html.ValidationMessageFor(program => program.EmploymentScope)
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(program => program.ProgramOverview)
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(program =>program.ProgramOverview, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
+            @Html.ValidationMessageFor(program => program.ProgramOverview)
+        </div>
+
+        
+        
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+</div>

@@ -1,0 +1,9 @@
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\bin\Debug\CustomTests.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\bin\Debug\CustomTests.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\obj\Debug\CustomTests.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\obj\Debug\CustomTests.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\bin\Debug\CustomTests.dll.config
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\bin\Debug\EntityFramework.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\bin\Debug\EntityFramework.xml
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\CustomTests\bin\Debug\EntityFramework.SqlServer.xml

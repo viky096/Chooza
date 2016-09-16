@@ -1,0 +1,2561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CHOOZAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CHOOZAModelStoreContainer">
+          <EntitySet Name="Academic_Credentials" EntityType="CHOOZAModel.Store.Academic_Credentials" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Answer" EntityType="CHOOZAModel.Store.Answer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Applications" EntityType="CHOOZAModel.Store.aspnet_Applications" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Membership" EntityType="CHOOZAModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Paths" EntityType="CHOOZAModel.Store.aspnet_Paths" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="CHOOZAModel.Store.aspnet_PersonalizationAllUsers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="CHOOZAModel.Store.aspnet_PersonalizationPerUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Profile" EntityType="CHOOZAModel.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Roles" EntityType="CHOOZAModel.Store.aspnet_Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_SchemaVersions" EntityType="CHOOZAModel.Store.aspnet_SchemaVersions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Users" EntityType="CHOOZAModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_UsersInRoles" EntityType="CHOOZAModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_WebEvent_Events" EntityType="CHOOZAModel.Store.aspnet_WebEvent_Events" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Booking" EntityType="CHOOZAModel.Store.Booking" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Category" EntityType="CHOOZAModel.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Comment" EntityType="CHOOZAModel.Store.Comment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Counsellor" EntityType="CHOOZAModel.Store.Counsellor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Counsellor_Rating" EntityType="CHOOZAModel.Store.Counsellor_Rating" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Discussion_Question" EntityType="CHOOZAModel.Store.Discussion_Question" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Fee_Structure" EntityType="CHOOZAModel.Store.Fee_Structure" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Option" EntityType="CHOOZAModel.Store.Option" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Program" EntityType="CHOOZAModel.Store.Program" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Program_University" EntityType="CHOOZAModel.Store.Program_University" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Qualification" EntityType="CHOOZAModel.Store.Qualification" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Question" EntityType="CHOOZAModel.Store.Question" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Recommendation" EntityType="CHOOZAModel.Store.Recommendation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Result" EntityType="CHOOZAModel.Store.Result" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Student" EntityType="CHOOZAModel.Store.Student" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Test" EntityType="CHOOZAModel.Store.Test" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="University" EntityType="CHOOZAModel.Store.University" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="Belongs to" Association="CHOOZAModel.Store.Belongs to">
+            <End Role="Program" EntitySet="Program" />
+            <End Role="Program_University" EntitySet="Program_University" />
+          </AssociationSet>
+          <AssociationSet Name="contains" Association="CHOOZAModel.Store.contains">
+            <End Role="Test" EntitySet="Test" />
+            <End Role="Question" EntitySet="Question" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__Appli__628FA481" Association="CHOOZAModel.Store.FK__aspnet_Me__Appli__628FA481">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__UserI__6383C8BA" Association="CHOOZAModel.Store.FK__aspnet_Me__UserI__6383C8BA">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pa__Appli__14270015" Association="CHOOZAModel.Store.FK__aspnet_Pa__Appli__14270015">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__19DFD96B" Association="CHOOZAModel.Store.FK__aspnet_Pe__PathI__19DFD96B">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__1DB06A4F" Association="CHOOZAModel.Store.FK__aspnet_Pe__PathI__1DB06A4F">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__UserI__1EA48E88" Association="CHOOZAModel.Store.FK__aspnet_Pe__UserI__1EA48E88">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pr__UserI__778AC167" Association="CHOOZAModel.Store.FK__aspnet_Pr__UserI__778AC167">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Ro__Appli__01142BA1" Association="CHOOZAModel.Store.FK__aspnet_Ro__Appli__01142BA1">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__Appli__52593CB8" Association="CHOOZAModel.Store.FK__aspnet_Us__Appli__52593CB8">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__RoleI__05D8E0BE" Association="CHOOZAModel.Store.FK__aspnet_Us__RoleI__05D8E0BE">
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+            <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__UserI__04E4BC85" Association="CHOOZAModel.Store.FK__aspnet_Us__UserI__04E4BC85">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Academic_Credentials_Student" Association="CHOOZAModel.Store.FK_Academic_Credentials_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Academic_Credentials" EntitySet="Academic_Credentials" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Answer_Student" Association="CHOOZAModel.Store.FK_Answer_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Answer" EntitySet="Answer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Student" Association="CHOOZAModel.Store.FK_Booking_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Counsellor_Rating_Counsellor" Association="CHOOZAModel.Store.FK_Counsellor_Rating_Counsellor">
+            <End Role="Counsellor" EntitySet="Counsellor" />
+            <End Role="Counsellor_Rating" EntitySet="Counsellor_Rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Counsellor_Rating_Student" Association="CHOOZAModel.Store.FK_Counsellor_Rating_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Counsellor_Rating" EntitySet="Counsellor_Rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Discussion_Question_Student" Association="CHOOZAModel.Store.FK_Discussion_Question_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Discussion_Question" EntitySet="Discussion_Question" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Qualification_Student" Association="CHOOZAModel.Store.FK_Qualification_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Qualification" EntitySet="Qualification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Result_Student" Association="CHOOZAModel.Store.FK_Result_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Result" EntitySet="Result" />
+          </AssociationSet>
+          <AssociationSet Name="has" Association="CHOOZAModel.Store.has">
+            <End Role="Discussion_Question" EntitySet="Discussion_Question" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="have" Association="CHOOZAModel.Store.have">
+            <End Role="Question" EntitySet="Question" />
+            <End Role="Option" EntitySet="Option" />
+          </AssociationSet>
+          <AssociationSet Name="is answered as" Association="CHOOZAModel.Store.is answered as">
+            <End Role="Test" EntitySet="Test" />
+            <End Role="Answer" EntitySet="Answer" />
+          </AssociationSet>
+          <AssociationSet Name="is recommended as" Association="CHOOZAModel.Store.is recommended as">
+            <End Role="Program" EntitySet="Program" />
+            <End Role="Recommendation" EntitySet="Recommendation" />
+          </AssociationSet>
+          <AssociationSet Name="Manages" Association="CHOOZAModel.Store.Manages">
+            <End Role="Counsellor" EntitySet="Counsellor" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="Offers" Association="CHOOZAModel.Store.Offers">
+            <End Role="University" EntitySet="University" />
+            <End Role="Program_University" EntitySet="Program_University" />
+          </AssociationSet>
+          <AssociationSet Name="possesses" Association="CHOOZAModel.Store.possesses">
+            <End Role="Counsellor" EntitySet="Counsellor" />
+            <End Role="Qualification" EntitySet="Qualification" />
+          </AssociationSet>
+          <AssociationSet Name="Post" Association="CHOOZAModel.Store.Post">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="Posts" Association="CHOOZAModel.Store.Posts">
+            <End Role="Counsellor" EntitySet="Counsellor" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="provides" Association="CHOOZAModel.Store.provides">
+            <End Role="Test" EntitySet="Test" />
+            <End Role="Result" EntitySet="Result" />
+          </AssociationSet>
+          <AssociationSet Name="recommends" Association="CHOOZAModel.Store.recommends">
+            <End Role="Result" EntitySet="Result" />
+            <End Role="Recommendation" EntitySet="Recommendation" />
+          </AssociationSet>
+          <AssociationSet Name="Request" Association="CHOOZAModel.Store.Request">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="requires" Association="CHOOZAModel.Store.requires">
+            <End Role="Fee_Structure" EntitySet="Fee_Structure" />
+            <End Role="Program_University" EntitySet="Program_University" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Academic_Credentials">
+          <Key>
+            <PropertyRef Name="Record_ID" />
+          </Key>
+          <Property Name="Record_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Subject_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Marks" Type="int" />
+          <Property Name="Total_Marks" Type="int" />
+          <Property Name="Major" Type="varchar" MaxLength="50" />
+          <Property Name="Student_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="Answer_ID" />
+          </Key>
+          <Property Name="Answer_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Student_Answer" Type="varchar" MaxLength="50" />
+          <Property Name="Test_ID" Type="uniqueidentifier" />
+          <Property Name="Student_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordFormat" Type="int" Nullable="false" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsApproved" Type="bit" Nullable="false" />
+          <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="aspnet_Paths">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationAllUsers">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PageSettings" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationPerUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PathId" Type="uniqueidentifier" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="PageSettings" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Profile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+          <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+          <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_SchemaVersions">
+          <Key>
+            <PropertyRef Name="Feature" />
+            <PropertyRef Name="CompatibleSchemaVersion" />
+          </Key>
+          <Property Name="Feature" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="CompatibleSchemaVersion" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_UsersInRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_WebEvent_Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="char" Nullable="false" MaxLength="32" />
+          <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+          <Property Name="EventTime" Type="datetime" Nullable="false" />
+          <Property Name="EventType" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="EventSequence" Type="decimal" Nullable="false" Precision="19" />
+          <Property Name="EventOccurrence" Type="decimal" Nullable="false" Precision="19" />
+          <Property Name="EventCode" Type="int" Nullable="false" />
+          <Property Name="EventDetailCode" Type="int" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+          <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+          <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+          <Property Name="Details" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="Booking_ID" />
+          </Key>
+          <Property Name="Booking_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Date_Time" Type="datetime" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Student_ID" Type="uniqueidentifier" />
+          <Property Name="Counsellor_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Comment_ID" />
+          </Key>
+          <Property Name="Comment_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Question_ID" Type="uniqueidentifier" />
+          <Property Name="Statement" Type="varchar(max)" />
+          <Property Name="Counsellor_ID" Type="uniqueidentifier" />
+          <Property Name="Student_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Counsellor">
+          <Key>
+            <PropertyRef Name="Counsellor_ID" />
+          </Key>
+          <Property Name="Counsellor_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Email_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Image" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="Introduction" Type="varchar(max)" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="uniqueidentifier" />
+          <Property Name="UpdatedDate" Type="uniqueidentifier" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Counsellor_Rating">
+          <Key>
+            <PropertyRef Name="Rating_ID" />
+          </Key>
+          <Property Name="Rating_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Rating_Stars" Type="int" />
+          <Property Name="Comment" Type="varchar(max)" />
+          <Property Name="Counsellor_ID" Type="uniqueidentifier" />
+          <Property Name="Student_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Discussion_Question">
+          <Key>
+            <PropertyRef Name="Question_ID" />
+          </Key>
+          <Property Name="Question_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Statement" Type="varchar(max)" />
+          <Property Name="Title" Type="varchar" MaxLength="50" />
+          <Property Name="Rating_Stars" Type="float" />
+          <Property Name="Category_ID" Type="uniqueidentifier" />
+          <Property Name="Student_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Createdate" Type="datetime" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Fee_Structure">
+          <Key>
+            <PropertyRef Name="Fee_ID" />
+          </Key>
+          <Property Name="Fee_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="First_Sem_Fee" Type="varchar(max)" />
+          <Property Name="Second_Onwards_Fee" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Option">
+          <Key>
+            <PropertyRef Name="Option_ID" />
+          </Key>
+          <Property Name="Option_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Statement" Type="varchar(max)" />
+          <Property Name="Question_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Program">
+          <Key>
+            <PropertyRef Name="Program_ID" />
+          </Key>
+          <Property Name="Program_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" />
+          <Property Name="Skills_Needed" Type="varchar(max)" />
+          <Property Name="Education_Scope" Type="varchar(max)" />
+          <Property Name="Employment_Scope" Type="varchar(max)" />
+          <Property Name="Program_Overview" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Program_University">
+          <Key>
+            <PropertyRef Name="Program_Uni_ID" />
+          </Key>
+          <Property Name="Program_Uni_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Program_ID" Type="uniqueidentifier" />
+          <Property Name="University_ID" Type="uniqueidentifier" />
+          <Property Name="Fee_ID" Type="uniqueidentifier" />
+          <Property Name="Admission_Criteria" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Qualification">
+          <Key>
+            <PropertyRef Name="Qualification_ID" />
+          </Key>
+          <Property Name="Qualification_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Student_ID" Type="uniqueidentifier" />
+          <Property Name="Counsellor_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Question_ID" />
+          </Key>
+          <Property Name="Question_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Statement" Type="varchar(max)" />
+          <Property Name="Test_ID" Type="uniqueidentifier" />
+          <Property Name="Result" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Recommendation">
+          <Key>
+            <PropertyRef Name="Recommendation_ID" />
+          </Key>
+          <Property Name="Recommendation_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Result_ID" Type="uniqueidentifier" />
+          <Property Name="Program_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="Result_ID" />
+          </Key>
+          <Property Name="Result_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Personality_Interest" Type="varchar" MaxLength="50" />
+          <Property Name="Test_ID" Type="uniqueidentifier" />
+          <Property Name="Student_ID" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+          </Key>
+          <Property Name="Student_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Email_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Picture" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="Test_ID" />
+          </Key>
+          <Property Name="Test_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="University">
+          <Key>
+            <PropertyRef Name="University_ID" />
+          </Key>
+          <Property Name="University_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Introduction" Type="varchar(max)" />
+          <Property Name="Admission_Details" Type="varchar(max)" />
+          <Property Name="ImageData" Type="varbinary" MaxLength="50" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UpdatedBy" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+          <Property Name="FileName" Type="varchar(max)" />
+          <Property Name="ImageSize" Type="int" />
+        </EntityType>
+        <Association Name="Belongs to">
+          <End Role="Program" Type="CHOOZAModel.Store.Program" Multiplicity="0..1" />
+          <End Role="Program_University" Type="CHOOZAModel.Store.Program_University" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program">
+              <PropertyRef Name="Program_ID" />
+            </Principal>
+            <Dependent Role="Program_University">
+              <PropertyRef Name="Program_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="contains">
+          <End Role="Test" Type="CHOOZAModel.Store.Test" Multiplicity="0..1" />
+          <End Role="Question" Type="CHOOZAModel.Store.Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Test">
+              <PropertyRef Name="Test_ID" />
+            </Principal>
+            <Dependent Role="Question">
+              <PropertyRef Name="Test_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__Appli__628FA481">
+          <End Role="aspnet_Applications" Type="CHOOZAModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="CHOOZAModel.Store.aspnet_Membership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__UserI__6383C8BA">
+          <End Role="aspnet_Users" Type="CHOOZAModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="CHOOZAModel.Store.aspnet_Membership" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pa__Appli__14270015">
+          <End Role="aspnet_Applications" Type="CHOOZAModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Paths" Type="CHOOZAModel.Store.aspnet_Paths" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Paths">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__19DFD96B">
+          <End Role="aspnet_Paths" Type="CHOOZAModel.Store.aspnet_Paths" Multiplicity="1" />
+          <End Role="aspnet_PersonalizationAllUsers" Type="CHOOZAModel.Store.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationAllUsers">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__1DB06A4F">
+          <End Role="aspnet_Paths" Type="CHOOZAModel.Store.aspnet_Paths" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="CHOOZAModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__UserI__1EA48E88">
+          <End Role="aspnet_Users" Type="CHOOZAModel.Store.aspnet_Users" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="CHOOZAModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pr__UserI__778AC167">
+          <End Role="aspnet_Users" Type="CHOOZAModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Profile" Type="CHOOZAModel.Store.aspnet_Profile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Profile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Ro__Appli__01142BA1">
+          <End Role="aspnet_Applications" Type="CHOOZAModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Roles" Type="CHOOZAModel.Store.aspnet_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Roles">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__Appli__52593CB8">
+          <End Role="aspnet_Applications" Type="CHOOZAModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Users" Type="CHOOZAModel.Store.aspnet_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Users">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__RoleI__05D8E0BE">
+          <End Role="aspnet_Roles" Type="CHOOZAModel.Store.aspnet_Roles" Multiplicity="1" />
+          <End Role="aspnet_UsersInRoles" Type="CHOOZAModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="aspnet_UsersInRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__UserI__04E4BC85">
+          <End Role="aspnet_Users" Type="CHOOZAModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_UsersInRoles" Type="CHOOZAModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_UsersInRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Academic_Credentials_Student">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Academic_Credentials" Type="CHOOZAModel.Store.Academic_Credentials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Academic_Credentials">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Answer_Student">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Answer" Type="CHOOZAModel.Store.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Student">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Booking" Type="CHOOZAModel.Store.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Counsellor_Rating_Counsellor">
+          <End Role="Counsellor" Type="CHOOZAModel.Store.Counsellor" Multiplicity="0..1" />
+          <End Role="Counsellor_Rating" Type="CHOOZAModel.Store.Counsellor_Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counsellor">
+              <PropertyRef Name="Counsellor_ID" />
+            </Principal>
+            <Dependent Role="Counsellor_Rating">
+              <PropertyRef Name="Counsellor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Counsellor_Rating_Student">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Counsellor_Rating" Type="CHOOZAModel.Store.Counsellor_Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Counsellor_Rating">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Discussion_Question_Student">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Discussion_Question" Type="CHOOZAModel.Store.Discussion_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Discussion_Question">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Qualification_Student">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Qualification" Type="CHOOZAModel.Store.Qualification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Qualification">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Result_Student">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Result" Type="CHOOZAModel.Store.Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="has">
+          <End Role="Discussion_Question" Type="CHOOZAModel.Store.Discussion_Question" Multiplicity="0..1" />
+          <End Role="Comment" Type="CHOOZAModel.Store.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Discussion_Question">
+              <PropertyRef Name="Question_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="Question_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="have">
+          <End Role="Question" Type="CHOOZAModel.Store.Question" Multiplicity="0..1" />
+          <End Role="Option" Type="CHOOZAModel.Store.Option" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Question_ID" />
+            </Principal>
+            <Dependent Role="Option">
+              <PropertyRef Name="Question_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="is answered as">
+          <End Role="Test" Type="CHOOZAModel.Store.Test" Multiplicity="0..1" />
+          <End Role="Answer" Type="CHOOZAModel.Store.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Test">
+              <PropertyRef Name="Test_ID" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="Test_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="is recommended as">
+          <End Role="Program" Type="CHOOZAModel.Store.Program" Multiplicity="0..1" />
+          <End Role="Recommendation" Type="CHOOZAModel.Store.Recommendation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program">
+              <PropertyRef Name="Program_ID" />
+            </Principal>
+            <Dependent Role="Recommendation">
+              <PropertyRef Name="Program_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Manages">
+          <End Role="Counsellor" Type="CHOOZAModel.Store.Counsellor" Multiplicity="0..1" />
+          <End Role="Booking" Type="CHOOZAModel.Store.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counsellor">
+              <PropertyRef Name="Counsellor_ID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="Counsellor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Offers">
+          <End Role="University" Type="CHOOZAModel.Store.University" Multiplicity="0..1" />
+          <End Role="Program_University" Type="CHOOZAModel.Store.Program_University" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="University">
+              <PropertyRef Name="University_ID" />
+            </Principal>
+            <Dependent Role="Program_University">
+              <PropertyRef Name="University_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="possesses">
+          <End Role="Counsellor" Type="CHOOZAModel.Store.Counsellor" Multiplicity="0..1" />
+          <End Role="Qualification" Type="CHOOZAModel.Store.Qualification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counsellor">
+              <PropertyRef Name="Counsellor_ID" />
+            </Principal>
+            <Dependent Role="Qualification">
+              <PropertyRef Name="Counsellor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Post">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Comment" Type="CHOOZAModel.Store.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Posts">
+          <End Role="Counsellor" Type="CHOOZAModel.Store.Counsellor" Multiplicity="0..1" />
+          <End Role="Comment" Type="CHOOZAModel.Store.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counsellor">
+              <PropertyRef Name="Counsellor_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="Counsellor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provides">
+          <End Role="Test" Type="CHOOZAModel.Store.Test" Multiplicity="0..1" />
+          <End Role="Result" Type="CHOOZAModel.Store.Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Test">
+              <PropertyRef Name="Test_ID" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="Test_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="recommends">
+          <End Role="Result" Type="CHOOZAModel.Store.Result" Multiplicity="0..1" />
+          <End Role="Recommendation" Type="CHOOZAModel.Store.Recommendation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Result">
+              <PropertyRef Name="Result_ID" />
+            </Principal>
+            <Dependent Role="Recommendation">
+              <PropertyRef Name="Result_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Request">
+          <End Role="Student" Type="CHOOZAModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Booking" Type="CHOOZAModel.Store.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="requires">
+          <End Role="Fee_Structure" Type="CHOOZAModel.Store.Fee_Structure" Multiplicity="0..1" />
+          <End Role="Program_University" Type="CHOOZAModel.Store.Program_University" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fee_Structure">
+              <PropertyRef Name="Fee_ID" />
+            </Principal>
+            <Dependent Role="Program_University">
+              <PropertyRef Name="Fee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CHOOZAModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CHOOZAEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Academic_Credentials" EntityType="CHOOZAModel.Academic_Credentials" />
+          <EntitySet Name="Answers" EntityType="CHOOZAModel.Answer" />
+          <EntitySet Name="aspnet_Applications" EntityType="CHOOZAModel.aspnet_Applications" />
+          <EntitySet Name="aspnet_Membership" EntityType="CHOOZAModel.aspnet_Membership" />
+          <EntitySet Name="aspnet_Paths" EntityType="CHOOZAModel.aspnet_Paths" />
+          <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="CHOOZAModel.aspnet_PersonalizationAllUsers" />
+          <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="CHOOZAModel.aspnet_PersonalizationPerUser" />
+          <EntitySet Name="aspnet_Profile" EntityType="CHOOZAModel.aspnet_Profile" />
+          <EntitySet Name="aspnet_Roles" EntityType="CHOOZAModel.aspnet_Roles" />
+          <EntitySet Name="aspnet_SchemaVersions" EntityType="CHOOZAModel.aspnet_SchemaVersions" />
+          <EntitySet Name="aspnet_Users" EntityType="CHOOZAModel.aspnet_Users" />
+          <EntitySet Name="aspnet_WebEvent_Events" EntityType="CHOOZAModel.aspnet_WebEvent_Events" />
+          <EntitySet Name="Bookings" EntityType="CHOOZAModel.Booking" />
+          <EntitySet Name="Categories" EntityType="CHOOZAModel.Category" />
+          <EntitySet Name="Comments" EntityType="CHOOZAModel.Comment" />
+          <EntitySet Name="Counsellors" EntityType="CHOOZAModel.Counsellor" />
+          <EntitySet Name="Counsellor_Rating" EntityType="CHOOZAModel.Counsellor_Rating" />
+          <EntitySet Name="Discussion_Question" EntityType="CHOOZAModel.Discussion_Question" />
+          <EntitySet Name="Fee_Structure" EntityType="CHOOZAModel.Fee_Structure" />
+          <EntitySet Name="Options" EntityType="CHOOZAModel.Option" />
+          <EntitySet Name="Programs" EntityType="CHOOZAModel.Program" />
+          <EntitySet Name="Program_University" EntityType="CHOOZAModel.Program_University" />
+          <EntitySet Name="Qualifications" EntityType="CHOOZAModel.Qualification" />
+          <EntitySet Name="Questions" EntityType="CHOOZAModel.Question" />
+          <EntitySet Name="Recommendations" EntityType="CHOOZAModel.Recommendation" />
+          <EntitySet Name="Results" EntityType="CHOOZAModel.Result" />
+          <EntitySet Name="Students" EntityType="CHOOZAModel.Student" />
+          <EntitySet Name="Tests" EntityType="CHOOZAModel.Test" />
+          <EntitySet Name="Universities" EntityType="CHOOZAModel.University" />
+          <AssociationSet Name="FK_Academic_Credentials_Student" Association="CHOOZAModel.FK_Academic_Credentials_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Academic_Credentials" EntitySet="Academic_Credentials" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Answer_Student" Association="CHOOZAModel.FK_Answer_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="is_answered_as" Association="CHOOZAModel.is_answered_as">
+            <End Role="Test" EntitySet="Tests" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__Appli__628FA481" Association="CHOOZAModel.FK__aspnet_Me__Appli__628FA481">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pa__Appli__14270015" Association="CHOOZAModel.FK__aspnet_Pa__Appli__14270015">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Ro__Appli__01142BA1" Association="CHOOZAModel.FK__aspnet_Ro__Appli__01142BA1">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__Appli__52593CB8" Association="CHOOZAModel.FK__aspnet_Us__Appli__52593CB8">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__UserI__6383C8BA" Association="CHOOZAModel.FK__aspnet_Me__UserI__6383C8BA">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__19DFD96B" Association="CHOOZAModel.FK__aspnet_Pe__PathI__19DFD96B">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__1DB06A4F" Association="CHOOZAModel.FK__aspnet_Pe__PathI__1DB06A4F">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__UserI__1EA48E88" Association="CHOOZAModel.FK__aspnet_Pe__UserI__1EA48E88">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pr__UserI__778AC167" Association="CHOOZAModel.FK__aspnet_Pr__UserI__778AC167">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Student" Association="CHOOZAModel.FK_Booking_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="Manages" Association="CHOOZAModel.Manages">
+            <End Role="Counsellor" EntitySet="Counsellors" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="Request" Association="CHOOZAModel.Request">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="has" Association="CHOOZAModel.has">
+            <End Role="Discussion_Question" EntitySet="Discussion_Question" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="Post" Association="CHOOZAModel.Post">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="Posts" Association="CHOOZAModel.Posts">
+            <End Role="Counsellor" EntitySet="Counsellors" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Counsellor_Rating_Counsellor" Association="CHOOZAModel.FK_Counsellor_Rating_Counsellor">
+            <End Role="Counsellor" EntitySet="Counsellors" />
+            <End Role="Counsellor_Rating" EntitySet="Counsellor_Rating" />
+          </AssociationSet>
+          <AssociationSet Name="possesses" Association="CHOOZAModel.possesses">
+            <End Role="Counsellor" EntitySet="Counsellors" />
+            <End Role="Qualification" EntitySet="Qualifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Counsellor_Rating_Student" Association="CHOOZAModel.FK_Counsellor_Rating_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Counsellor_Rating" EntitySet="Counsellor_Rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Discussion_Question_Student" Association="CHOOZAModel.FK_Discussion_Question_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Discussion_Question" EntitySet="Discussion_Question" />
+          </AssociationSet>
+          <AssociationSet Name="requires" Association="CHOOZAModel.requires">
+            <End Role="Fee_Structure" EntitySet="Fee_Structure" />
+            <End Role="Program_University" EntitySet="Program_University" />
+          </AssociationSet>
+          <AssociationSet Name="have" Association="CHOOZAModel.have">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="Option" EntitySet="Options" />
+          </AssociationSet>
+          <AssociationSet Name="Belongs_to" Association="CHOOZAModel.Belongs_to">
+            <End Role="Program" EntitySet="Programs" />
+            <End Role="Program_University" EntitySet="Program_University" />
+          </AssociationSet>
+          <AssociationSet Name="is_recommended_as" Association="CHOOZAModel.is_recommended_as">
+            <End Role="Program" EntitySet="Programs" />
+            <End Role="Recommendation" EntitySet="Recommendations" />
+          </AssociationSet>
+          <AssociationSet Name="Offers" Association="CHOOZAModel.Offers">
+            <End Role="University" EntitySet="Universities" />
+            <End Role="Program_University" EntitySet="Program_University" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Qualification_Student" Association="CHOOZAModel.FK_Qualification_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Qualification" EntitySet="Qualifications" />
+          </AssociationSet>
+          <AssociationSet Name="contains" Association="CHOOZAModel.contains">
+            <End Role="Test" EntitySet="Tests" />
+            <End Role="Question" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="recommends" Association="CHOOZAModel.recommends">
+            <End Role="Result" EntitySet="Results" />
+            <End Role="Recommendation" EntitySet="Recommendations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Result_Student" Association="CHOOZAModel.FK_Result_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Result" EntitySet="Results" />
+          </AssociationSet>
+          <AssociationSet Name="provides" Association="CHOOZAModel.provides">
+            <End Role="Test" EntitySet="Tests" />
+            <End Role="Result" EntitySet="Results" />
+          </AssociationSet>
+          <AssociationSet Name="aspnet_UsersInRoles" Association="CHOOZAModel.aspnet_UsersInRoles">
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Academic_Credentials">
+          <Key>
+            <PropertyRef Name="Record_ID" />
+          </Key>
+          <Property Type="Guid" Name="Record_ID" Nullable="false" />
+          <Property Type="String" Name="Subject_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Marks" />
+          <Property Type="Int32" Name="Total_Marks" />
+          <Property Type="String" Name="Major" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Student_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Student" Relationship="CHOOZAModel.FK_Academic_Credentials_Student" FromRole="Academic_Credentials" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="Answer_ID" />
+          </Key>
+          <Property Type="Guid" Name="Answer_ID" Nullable="false" />
+          <Property Type="String" Name="Student_Answer" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Test_ID" />
+          <Property Type="Guid" Name="Student_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Student" Relationship="CHOOZAModel.FK_Answer_Student" FromRole="Answer" ToRole="Student" />
+          <NavigationProperty Name="Test" Relationship="CHOOZAModel.is_answered_as" FromRole="Answer" ToRole="Test" />
+        </EntityType>
+        <EntityType Name="aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Type="String" Name="ApplicationName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoweredApplicationName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="CHOOZAModel.FK__aspnet_Me__Appli__628FA481" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="CHOOZAModel.FK__aspnet_Pa__Appli__14270015" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="CHOOZAModel.FK__aspnet_Ro__Appli__01142BA1" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+          <NavigationProperty Name="aspnet_Users" Relationship="CHOOZAModel.FK__aspnet_Us__Appli__52593CB8" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PasswordFormat" Nullable="false" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobilePIN" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoweredEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordQuestion" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordAnswer" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="FailedPasswordAttemptCount" Nullable="false" />
+          <Property Type="DateTime" Name="FailedPasswordAttemptWindowStart" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="FailedPasswordAnswerAttemptCount" Nullable="false" />
+          <Property Type="DateTime" Name="FailedPasswordAnswerAttemptWindowStart" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="CHOOZAModel.FK__aspnet_Me__Appli__628FA481" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="CHOOZAModel.FK__aspnet_Me__UserI__6383C8BA" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Paths">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="PathId" Nullable="false" />
+          <Property Type="String" Name="Path" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoweredPath" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="CHOOZAModel.FK__aspnet_Pa__Appli__14270015" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="CHOOZAModel.FK__aspnet_Pe__PathI__19DFD96B" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="CHOOZAModel.FK__aspnet_Pe__PathI__1DB06A4F" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationAllUsers">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Type="Guid" Name="PathId" Nullable="false" />
+          <Property Type="Binary" Name="PageSettings" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="DateTime" Name="LastUpdatedDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="CHOOZAModel.FK__aspnet_Pe__PathI__19DFD96B" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationPerUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="PathId" />
+          <Property Type="Guid" Name="UserId" />
+          <Property Type="Binary" Name="PageSettings" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="DateTime" Name="LastUpdatedDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="CHOOZAModel.FK__aspnet_Pe__PathI__1DB06A4F" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Users" Relationship="CHOOZAModel.FK__aspnet_Pe__UserI__1EA48E88" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Profile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="PropertyNames" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PropertyValuesString" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="PropertyValuesBinary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="DateTime" Name="LastUpdatedDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="aspnet_Users" Relationship="CHOOZAModel.FK__aspnet_Pr__UserI__778AC167" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="RoleId" Nullable="false" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoweredRoleName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="CHOOZAModel.FK__aspnet_Ro__Appli__01142BA1" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="CHOOZAModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_SchemaVersions">
+          <Key>
+            <PropertyRef Name="Feature" />
+            <PropertyRef Name="CompatibleSchemaVersion" />
+          </Key>
+          <Property Type="String" Name="Feature" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompatibleSchemaVersion" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsCurrentVersion" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoweredUserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobileAlias" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsAnonymous" Nullable="false" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="CHOOZAModel.FK__aspnet_Us__Appli__52593CB8" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="CHOOZAModel.FK__aspnet_Me__UserI__6383C8BA" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="CHOOZAModel.FK__aspnet_Pe__UserI__1EA48E88" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+          <NavigationProperty Name="aspnet_Profile" Relationship="CHOOZAModel.FK__aspnet_Pr__UserI__778AC167" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="CHOOZAModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
+        </EntityType>
+        <EntityType Name="aspnet_WebEvent_Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Type="String" Name="EventId" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="EventTimeUtc" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="EventTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="EventType" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="EventSequence" Nullable="false" Precision="19" Scale="0" />
+          <Property Type="Decimal" Name="EventOccurrence" Nullable="false" Precision="19" Scale="0" />
+          <Property Type="Int32" Name="EventCode" Nullable="false" />
+          <Property Type="Int32" Name="EventDetailCode" Nullable="false" />
+          <Property Type="String" Name="Message" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApplicationPath" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApplicationVirtualPath" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MachineName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RequestUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ExceptionType" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Details" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="Booking_ID" />
+          </Key>
+          <Property Type="Guid" Name="Booking_ID" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Date_Time" Precision="3" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Student_ID" />
+          <Property Type="Guid" Name="Counsellor_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Student" Relationship="CHOOZAModel.FK_Booking_Student" FromRole="Booking" ToRole="Student" />
+          <NavigationProperty Name="Counsellor" Relationship="CHOOZAModel.Manages" FromRole="Booking" ToRole="Counsellor" />
+          <NavigationProperty Name="Student1" Relationship="CHOOZAModel.Request" FromRole="Booking" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Type="Guid" Name="Category_ID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Comment_ID" />
+          </Key>
+          <Property Type="Guid" Name="Comment_ID" Nullable="false" />
+          <Property Type="Guid" Name="Question_ID" />
+          <Property Type="String" Name="Statement" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Counsellor_ID" />
+          <Property Type="Guid" Name="Student_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdateDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Discussion_Question" Relationship="CHOOZAModel.has" FromRole="Comment" ToRole="Discussion_Question" />
+          <NavigationProperty Name="Student" Relationship="CHOOZAModel.Post" FromRole="Comment" ToRole="Student" />
+          <NavigationProperty Name="Counsellor" Relationship="CHOOZAModel.Posts" FromRole="Comment" ToRole="Counsellor" />
+        </EntityType>
+        <EntityType Name="Counsellor">
+          <Key>
+            <PropertyRef Name="Counsellor_ID" />
+          </Key>
+          <Property Type="Guid" Name="Counsellor_ID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Username" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Image" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Introduction" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="Guid" Name="CreatedDate" />
+          <Property Type="Guid" Name="UpdatedDate" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Bookings" Relationship="CHOOZAModel.Manages" FromRole="Counsellor" ToRole="Booking" />
+          <NavigationProperty Name="Comments" Relationship="CHOOZAModel.Posts" FromRole="Counsellor" ToRole="Comment" />
+          <NavigationProperty Name="Counsellor_Rating" Relationship="CHOOZAModel.FK_Counsellor_Rating_Counsellor" FromRole="Counsellor" ToRole="Counsellor_Rating" />
+          <NavigationProperty Name="Qualifications" Relationship="CHOOZAModel.possesses" FromRole="Counsellor" ToRole="Qualification" />
+        </EntityType>
+        <EntityType Name="Counsellor_Rating">
+          <Key>
+            <PropertyRef Name="Rating_ID" />
+          </Key>
+          <Property Type="Guid" Name="Rating_ID" Nullable="false" />
+          <Property Type="Int32" Name="Rating_Stars" />
+          <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Counsellor_ID" />
+          <Property Type="Guid" Name="Student_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Counsellor" Relationship="CHOOZAModel.FK_Counsellor_Rating_Counsellor" FromRole="Counsellor_Rating" ToRole="Counsellor" />
+          <NavigationProperty Name="Student" Relationship="CHOOZAModel.FK_Counsellor_Rating_Student" FromRole="Counsellor_Rating" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Discussion_Question">
+          <Key>
+            <PropertyRef Name="Question_ID" />
+          </Key>
+          <Property Type="Guid" Name="Question_ID" Nullable="false" />
+          <Property Type="String" Name="Statement" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Title" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Rating_Stars" />
+          <Property Type="Guid" Name="Category_ID" />
+          <Property Type="Guid" Name="Student_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="Createdate" Precision="3" />
+          <Property Type="DateTime" Name="UpdateDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Comments" Relationship="CHOOZAModel.has" FromRole="Discussion_Question" ToRole="Comment" />
+          <NavigationProperty Name="Student" Relationship="CHOOZAModel.FK_Discussion_Question_Student" FromRole="Discussion_Question" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Fee_Structure">
+          <Key>
+            <PropertyRef Name="Fee_ID" />
+          </Key>
+          <Property Type="Guid" Name="Fee_ID" Nullable="false" />
+          <Property Type="String" Name="First_Sem_Fee" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Second_Onwards_Fee" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Program_University" Relationship="CHOOZAModel.requires" FromRole="Fee_Structure" ToRole="Program_University" />
+        </EntityType>
+        <EntityType Name="Option">
+          <Key>
+            <PropertyRef Name="Option_ID" />
+          </Key>
+          <Property Type="Guid" Name="Option_ID" Nullable="false" />
+          <Property Type="String" Name="Statement" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Question_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Question" Relationship="CHOOZAModel.have" FromRole="Option" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="Program">
+          <Key>
+            <PropertyRef Name="Program_ID" />
+          </Key>
+          <Property Type="Guid" Name="Program_ID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Skills_Needed" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Education_Scope" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Employment_Scope" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Program_Overview" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Program_University" Relationship="CHOOZAModel.Belongs_to" FromRole="Program" ToRole="Program_University" />
+          <NavigationProperty Name="Recommendations" Relationship="CHOOZAModel.is_recommended_as" FromRole="Program" ToRole="Recommendation" />
+        </EntityType>
+        <EntityType Name="Program_University">
+          <Key>
+            <PropertyRef Name="Program_Uni_ID" />
+          </Key>
+          <Property Type="Guid" Name="Program_Uni_ID" Nullable="false" />
+          <Property Type="Guid" Name="Program_ID" />
+          <Property Type="Guid" Name="University_ID" />
+          <Property Type="Guid" Name="Fee_ID" />
+          <Property Type="String" Name="Admission_Criteria" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Fee_Structure" Relationship="CHOOZAModel.requires" FromRole="Program_University" ToRole="Fee_Structure" />
+          <NavigationProperty Name="Program" Relationship="CHOOZAModel.Belongs_to" FromRole="Program_University" ToRole="Program" />
+          <NavigationProperty Name="University" Relationship="CHOOZAModel.Offers" FromRole="Program_University" ToRole="University" />
+        </EntityType>
+        <EntityType Name="Qualification">
+          <Key>
+            <PropertyRef Name="Qualification_ID" />
+          </Key>
+          <Property Type="Guid" Name="Qualification_ID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Student_ID" />
+          <Property Type="Guid" Name="Counsellor_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Counsellor" Relationship="CHOOZAModel.possesses" FromRole="Qualification" ToRole="Counsellor" />
+          <NavigationProperty Name="Student" Relationship="CHOOZAModel.FK_Qualification_Student" FromRole="Qualification" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Question_ID" />
+          </Key>
+          <Property Type="Guid" Name="Question_ID" Nullable="false" />
+          <Property Type="String" Name="Statement" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Test_ID" />
+          <Property Type="String" Name="Result" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Options" Relationship="CHOOZAModel.have" FromRole="Question" ToRole="Option" />
+          <NavigationProperty Name="Test" Relationship="CHOOZAModel.contains" FromRole="Question" ToRole="Test" />
+        </EntityType>
+        <EntityType Name="Recommendation">
+          <Key>
+            <PropertyRef Name="Recommendation_ID" />
+          </Key>
+          <Property Type="Guid" Name="Recommendation_ID" Nullable="false" />
+          <Property Type="Guid" Name="Result_ID" />
+          <Property Type="Guid" Name="Program_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Program" Relationship="CHOOZAModel.is_recommended_as" FromRole="Recommendation" ToRole="Program" />
+          <NavigationProperty Name="Result" Relationship="CHOOZAModel.recommends" FromRole="Recommendation" ToRole="Result" />
+        </EntityType>
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="Result_ID" />
+          </Key>
+          <Property Type="Guid" Name="Result_ID" Nullable="false" />
+          <Property Type="String" Name="Personality_Interest" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Test_ID" />
+          <Property Type="Guid" Name="Student_ID" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Recommendations" Relationship="CHOOZAModel.recommends" FromRole="Result" ToRole="Recommendation" />
+          <NavigationProperty Name="Student" Relationship="CHOOZAModel.FK_Result_Student" FromRole="Result" ToRole="Student" />
+          <NavigationProperty Name="Test" Relationship="CHOOZAModel.provides" FromRole="Result" ToRole="Test" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+          </Key>
+          <Property Type="Guid" Name="Student_ID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Username" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Picture" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DOB" Precision="0" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Academic_Credentials" Relationship="CHOOZAModel.FK_Academic_Credentials_Student" FromRole="Student" ToRole="Academic_Credentials" />
+          <NavigationProperty Name="Answers" Relationship="CHOOZAModel.FK_Answer_Student" FromRole="Student" ToRole="Answer" />
+          <NavigationProperty Name="Bookings" Relationship="CHOOZAModel.FK_Booking_Student" FromRole="Student" ToRole="Booking" />
+          <NavigationProperty Name="Bookings1" Relationship="CHOOZAModel.Request" FromRole="Student" ToRole="Booking" />
+          <NavigationProperty Name="Comments" Relationship="CHOOZAModel.Post" FromRole="Student" ToRole="Comment" />
+          <NavigationProperty Name="Counsellor_Rating" Relationship="CHOOZAModel.FK_Counsellor_Rating_Student" FromRole="Student" ToRole="Counsellor_Rating" />
+          <NavigationProperty Name="Discussion_Question" Relationship="CHOOZAModel.FK_Discussion_Question_Student" FromRole="Student" ToRole="Discussion_Question" />
+          <NavigationProperty Name="Qualifications" Relationship="CHOOZAModel.FK_Qualification_Student" FromRole="Student" ToRole="Qualification" />
+          <NavigationProperty Name="Results" Relationship="CHOOZAModel.FK_Result_Student" FromRole="Student" ToRole="Result" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="Test_ID" />
+          </Key>
+          <Property Type="Guid" Name="Test_ID" Nullable="false" />
+          <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <NavigationProperty Name="Answers" Relationship="CHOOZAModel.is_answered_as" FromRole="Test" ToRole="Answer" />
+          <NavigationProperty Name="Questions" Relationship="CHOOZAModel.contains" FromRole="Test" ToRole="Question" />
+          <NavigationProperty Name="Results" Relationship="CHOOZAModel.provides" FromRole="Test" ToRole="Result" />
+        </EntityType>
+        <EntityType Name="University">
+          <Key>
+            <PropertyRef Name="University_ID" />
+          </Key>
+          <Property Type="Guid" Name="University_ID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Introduction" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Admission_Details" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="ImageData" MaxLength="50" FixedLength="false" />
+          <Property Type="Guid" Name="CreatedBy" />
+          <Property Type="Guid" Name="UpdatedBy" />
+          <Property Type="Boolean" Name="IsDeleted" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
+          <Property Type="Guid" Name="CurrentApplicationId" />
+          <Property Type="String" Name="FileName" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ImageSize" />
+          <NavigationProperty Name="Program_University" Relationship="CHOOZAModel.Offers" FromRole="University" ToRole="Program_University" />
+        </EntityType>
+        <Association Name="FK_Academic_Credentials_Student">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Academic_Credentials" Role="Academic_Credentials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Academic_Credentials">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Answer_Student">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Answer" Role="Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="is_answered_as">
+          <End Type="CHOOZAModel.Test" Role="Test" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Answer" Role="Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Test">
+              <PropertyRef Name="Test_ID" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="Test_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__Appli__628FA481">
+          <End Type="CHOOZAModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+          <End Type="CHOOZAModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pa__Appli__14270015">
+          <End Type="CHOOZAModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+          <End Type="CHOOZAModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Paths">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Ro__Appli__01142BA1">
+          <End Type="CHOOZAModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+          <End Type="CHOOZAModel.aspnet_Roles" Role="aspnet_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Roles">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__Appli__52593CB8">
+          <End Type="CHOOZAModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+          <End Type="CHOOZAModel.aspnet_Users" Role="aspnet_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Users">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__UserI__6383C8BA">
+          <End Type="CHOOZAModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+          <End Type="CHOOZAModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__19DFD96B">
+          <End Type="CHOOZAModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="1" />
+          <End Type="CHOOZAModel.aspnet_PersonalizationAllUsers" Role="aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationAllUsers">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__1DB06A4F">
+          <End Type="CHOOZAModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.aspnet_PersonalizationPerUser" Role="aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__UserI__1EA48E88">
+          <End Type="CHOOZAModel.aspnet_Users" Role="aspnet_Users" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.aspnet_PersonalizationPerUser" Role="aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pr__UserI__778AC167">
+          <End Type="CHOOZAModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+          <End Type="CHOOZAModel.aspnet_Profile" Role="aspnet_Profile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Profile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Student">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Manages">
+          <End Type="CHOOZAModel.Counsellor" Role="Counsellor" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counsellor">
+              <PropertyRef Name="Counsellor_ID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="Counsellor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Request">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="has">
+          <End Type="CHOOZAModel.Discussion_Question" Role="Discussion_Question" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Comment" Role="Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Discussion_Question">
+              <PropertyRef Name="Question_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="Question_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Post">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Comment" Role="Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Posts">
+          <End Type="CHOOZAModel.Counsellor" Role="Counsellor" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Comment" Role="Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counsellor">
+              <PropertyRef Name="Counsellor_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="Counsellor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Counsellor_Rating_Counsellor">
+          <End Type="CHOOZAModel.Counsellor" Role="Counsellor" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Counsellor_Rating" Role="Counsellor_Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counsellor">
+              <PropertyRef Name="Counsellor_ID" />
+            </Principal>
+            <Dependent Role="Counsellor_Rating">
+              <PropertyRef Name="Counsellor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="possesses">
+          <End Type="CHOOZAModel.Counsellor" Role="Counsellor" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Qualification" Role="Qualification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counsellor">
+              <PropertyRef Name="Counsellor_ID" />
+            </Principal>
+            <Dependent Role="Qualification">
+              <PropertyRef Name="Counsellor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Counsellor_Rating_Student">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Counsellor_Rating" Role="Counsellor_Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Counsellor_Rating">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Discussion_Question_Student">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Discussion_Question" Role="Discussion_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Discussion_Question">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="requires">
+          <End Type="CHOOZAModel.Fee_Structure" Role="Fee_Structure" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Program_University" Role="Program_University" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fee_Structure">
+              <PropertyRef Name="Fee_ID" />
+            </Principal>
+            <Dependent Role="Program_University">
+              <PropertyRef Name="Fee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="have">
+          <End Type="CHOOZAModel.Question" Role="Question" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Option" Role="Option" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Question_ID" />
+            </Principal>
+            <Dependent Role="Option">
+              <PropertyRef Name="Question_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Belongs_to">
+          <End Type="CHOOZAModel.Program" Role="Program" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Program_University" Role="Program_University" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program">
+              <PropertyRef Name="Program_ID" />
+            </Principal>
+            <Dependent Role="Program_University">
+              <PropertyRef Name="Program_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="is_recommended_as">
+          <End Type="CHOOZAModel.Program" Role="Program" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Recommendation" Role="Recommendation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program">
+              <PropertyRef Name="Program_ID" />
+            </Principal>
+            <Dependent Role="Recommendation">
+              <PropertyRef Name="Program_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Offers">
+          <End Type="CHOOZAModel.University" Role="University" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Program_University" Role="Program_University" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="University">
+              <PropertyRef Name="University_ID" />
+            </Principal>
+            <Dependent Role="Program_University">
+              <PropertyRef Name="University_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Qualification_Student">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Qualification" Role="Qualification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Qualification">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="contains">
+          <End Type="CHOOZAModel.Test" Role="Test" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Question" Role="Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Test">
+              <PropertyRef Name="Test_ID" />
+            </Principal>
+            <Dependent Role="Question">
+              <PropertyRef Name="Test_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="recommends">
+          <End Type="CHOOZAModel.Result" Role="Result" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Recommendation" Role="Recommendation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Result">
+              <PropertyRef Name="Result_ID" />
+            </Principal>
+            <Dependent Role="Recommendation">
+              <PropertyRef Name="Result_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Result_Student">
+          <End Type="CHOOZAModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Result" Role="Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provides">
+          <End Type="CHOOZAModel.Test" Role="Test" Multiplicity="0..1" />
+          <End Type="CHOOZAModel.Result" Role="Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Test">
+              <PropertyRef Name="Test_ID" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="Test_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="aspnet_UsersInRoles">
+          <End Type="CHOOZAModel.aspnet_Roles" Role="aspnet_Roles" Multiplicity="*" />
+          <End Type="CHOOZAModel.aspnet_Users" Role="aspnet_Users" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CHOOZAModelStoreContainer" CdmEntityContainer="CHOOZAEntities">
+          <EntitySetMapping Name="Academic_Credentials">
+            <EntityTypeMapping TypeName="CHOOZAModel.Academic_Credentials">
+              <MappingFragment StoreEntitySet="Academic_Credentials">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Major" ColumnName="Major" />
+                <ScalarProperty Name="Total_Marks" ColumnName="Total_Marks" />
+                <ScalarProperty Name="Marks" ColumnName="Marks" />
+                <ScalarProperty Name="Subject_Name" ColumnName="Subject_Name" />
+                <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="CHOOZAModel.Answer">
+              <MappingFragment StoreEntitySet="Answer">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
+                <ScalarProperty Name="Student_Answer" ColumnName="Student_Answer" />
+                <ScalarProperty Name="Answer_ID" ColumnName="Answer_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Applications">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_Applications">
+              <MappingFragment StoreEntitySet="aspnet_Applications">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+                <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Membership">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_Membership">
+              <MappingFragment StoreEntitySet="aspnet_Membership">
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+                <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+                <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+                <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Paths">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_Paths">
+              <MappingFragment StoreEntitySet="aspnet_Paths">
+                <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="PathId" ColumnName="PathId" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_PersonalizationAllUsers">
+              <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+                <ScalarProperty Name="PathId" ColumnName="PathId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_PersonalizationPerUser">
+              <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="PathId" ColumnName="PathId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Profile">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_Profile">
+              <MappingFragment StoreEntitySet="aspnet_Profile">
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+                <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+                <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Roles">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_Roles">
+              <MappingFragment StoreEntitySet="aspnet_Roles">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_SchemaVersions">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_SchemaVersions">
+              <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+                <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+                <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+                <ScalarProperty Name="Feature" ColumnName="Feature" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Users">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_Users">
+              <MappingFragment StoreEntitySet="aspnet_Users">
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+                <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+                <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_WebEvent_Events">
+            <EntityTypeMapping TypeName="CHOOZAModel.aspnet_WebEvent_Events">
+              <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+                <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+                <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+                <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+                <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bookings">
+            <EntityTypeMapping TypeName="CHOOZAModel.Booking">
+              <MappingFragment StoreEntitySet="Booking">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Counsellor_ID" ColumnName="Counsellor_ID" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Booking_ID" ColumnName="Booking_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="CHOOZAModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="CHOOZAModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Counsellor_ID" ColumnName="Counsellor_ID" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="Question_ID" ColumnName="Question_ID" />
+                <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Counsellors">
+            <EntityTypeMapping TypeName="CHOOZAModel.Counsellor">
+              <MappingFragment StoreEntitySet="Counsellor">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Introduction" ColumnName="Introduction" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Counsellor_ID" ColumnName="Counsellor_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Counsellor_Rating">
+            <EntityTypeMapping TypeName="CHOOZAModel.Counsellor_Rating">
+              <MappingFragment StoreEntitySet="Counsellor_Rating">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Counsellor_ID" ColumnName="Counsellor_ID" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Rating_Stars" ColumnName="Rating_Stars" />
+                <ScalarProperty Name="Rating_ID" ColumnName="Rating_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Discussion_Question">
+            <EntityTypeMapping TypeName="CHOOZAModel.Discussion_Question">
+              <MappingFragment StoreEntitySet="Discussion_Question">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+                <ScalarProperty Name="Rating_Stars" ColumnName="Rating_Stars" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="Question_ID" ColumnName="Question_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fee_Structure">
+            <EntityTypeMapping TypeName="CHOOZAModel.Fee_Structure">
+              <MappingFragment StoreEntitySet="Fee_Structure">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Second_Onwards_Fee" ColumnName="Second_Onwards_Fee" />
+                <ScalarProperty Name="First_Sem_Fee" ColumnName="First_Sem_Fee" />
+                <ScalarProperty Name="Fee_ID" ColumnName="Fee_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Options">
+            <EntityTypeMapping TypeName="CHOOZAModel.Option">
+              <MappingFragment StoreEntitySet="Option">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Question_ID" ColumnName="Question_ID" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="Option_ID" ColumnName="Option_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Programs">
+            <EntityTypeMapping TypeName="CHOOZAModel.Program">
+              <MappingFragment StoreEntitySet="Program">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Program_Overview" ColumnName="Program_Overview" />
+                <ScalarProperty Name="Employment_Scope" ColumnName="Employment_Scope" />
+                <ScalarProperty Name="Education_Scope" ColumnName="Education_Scope" />
+                <ScalarProperty Name="Skills_Needed" ColumnName="Skills_Needed" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Program_ID" ColumnName="Program_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Program_University">
+            <EntityTypeMapping TypeName="CHOOZAModel.Program_University">
+              <MappingFragment StoreEntitySet="Program_University">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Admission_Criteria" ColumnName="Admission_Criteria" />
+                <ScalarProperty Name="Fee_ID" ColumnName="Fee_ID" />
+                <ScalarProperty Name="University_ID" ColumnName="University_ID" />
+                <ScalarProperty Name="Program_ID" ColumnName="Program_ID" />
+                <ScalarProperty Name="Program_Uni_ID" ColumnName="Program_Uni_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qualifications">
+            <EntityTypeMapping TypeName="CHOOZAModel.Qualification">
+              <MappingFragment StoreEntitySet="Qualification">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Counsellor_ID" ColumnName="Counsellor_ID" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Qualification_ID" ColumnName="Qualification_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="CHOOZAModel.Question">
+              <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="Question_ID" ColumnName="Question_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recommendations">
+            <EntityTypeMapping TypeName="CHOOZAModel.Recommendation">
+              <MappingFragment StoreEntitySet="Recommendation">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Program_ID" ColumnName="Program_ID" />
+                <ScalarProperty Name="Result_ID" ColumnName="Result_ID" />
+                <ScalarProperty Name="Recommendation_ID" ColumnName="Recommendation_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Results">
+            <EntityTypeMapping TypeName="CHOOZAModel.Result">
+              <MappingFragment StoreEntitySet="Result">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
+                <ScalarProperty Name="Personality_Interest" ColumnName="Personality_Interest" />
+                <ScalarProperty Name="Result_ID" ColumnName="Result_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="CHOOZAModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tests">
+            <EntityTypeMapping TypeName="CHOOZAModel.Test">
+              <MappingFragment StoreEntitySet="Test">
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Universities">
+            <EntityTypeMapping TypeName="CHOOZAModel.University">
+              <MappingFragment StoreEntitySet="University">
+                <ScalarProperty Name="ImageSize" ColumnName="ImageSize" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ImageData" ColumnName="ImageData" />
+                <ScalarProperty Name="Admission_Details" ColumnName="Admission_Details" />
+                <ScalarProperty Name="Introduction" ColumnName="Introduction" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="University_ID" ColumnName="University_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="CHOOZAModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+            <EndProperty Name="aspnet_Users">
+              <ScalarProperty Name="UserId" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="aspnet_Roles">
+              <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

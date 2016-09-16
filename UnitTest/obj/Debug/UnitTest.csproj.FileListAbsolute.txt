@@ -1,0 +1,16 @@
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\UnitTest.dll.config
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\BusinessLogic.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\EntityFramework.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\Models.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\EntityProvider.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\BusinessLogic.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\EntityFramework.xml
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\Models.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\bin\Debug\EntityProvider.pdb
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\viky_\documents\visual studio 2012\Projects\chooza\UnitTest\obj\Debug\UnitTest.pdb
