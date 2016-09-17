@@ -6,38 +6,51 @@
 }
 
 <div class="add_margin">
-<h2>Details</h2>
+
 
 <fieldset>
-    <legend>UniversityViewModel</legend>
+    <legend>University Details</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(university => university.Name)
+         <b>Name</b>
     </div>
     <div class="display-field">
         @Html.DisplayFor(university => university.Name)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(university => university.City)
+        <b>City</b>
     </div>
     <div class="display-field">
         @Html.DisplayFor(university => university.City)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(university => university.Introduction)
+         <b>Introduction</b>
     </div>
     <div class="display-field">
         @Html.DisplayFor(university => university.Introduction)
     </div>
-
     <div class="display-label">
-         @Html.DisplayNameFor(university => university.Admission_details)
+         <b>Website</b>
     </div>
     <div class="display-field">
-        @Html.DisplayFor(university => university.Admission_details)
+        @Html.DisplayFor(university => university.Website)
     </div>
+    <div class="display-label">
+         <b>Address</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(university => university.Address)
+    </div>
+    <div class="display-label">
+         <b>Sector</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(university => university.Sector)
+    </div>
+
+    
 
     <div class="display-label">
          @Html.DisplayNameFor(university => university.ImageData)

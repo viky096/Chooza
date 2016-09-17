@@ -19,7 +19,7 @@ namespace EntityProvider
             this.Program_University = new HashSet<Program_University>();
         }
     
-        public System.Guid Fee_ID { get; set; }
+        public int Fee_ID { get; set; }
         public string First_Sem_Fee { get; set; }
         public string Second_Onwards_Fee { get; set; }
         public Nullable<System.Guid> CreatedBy { get; set; }

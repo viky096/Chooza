@@ -8,7 +8,7 @@ namespace Models.DatabaseModels
 {
     public class ProgramViewModel
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string SkillsNeeded { get; set; }
         public string EducationScope { get; set; }

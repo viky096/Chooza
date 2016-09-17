@@ -13,7 +13,16 @@ namespace Chooza.Controllers
         
        public ActionResult Index()
         {
-            return View();
+            try
+            {
+                Logic BL = new Logic();
+                ViewBag.FeeList = BL.DisplayFee();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
         }
        [HttpGet]
        public ActionResult Create()
@@ -34,6 +43,65 @@ namespace Chooza.Controllers
            catch
            {
                return View(model);
+           }
+
+       }
+       public ActionResult Delete(int id)
+       {
+           try
+           {
+               int fid = id;
+               Logic BL = new Logic();
+               BL.DeleteFee(fid);
+               return RedirectToAction("Index");
+           }
+           catch (Exception ex)
+           {
+               return View();
+           }
+       }
+       public ActionResult Edit(int id)
+       {
+           try
+           {
+               int fid = id;
+               Logic BL = new Logic();
+
+               return View(BL.EditFee(fid));
+           }
+           catch (Exception Ex)
+           {
+               return View();
+           }
+       }
+       [HttpPost]
+       public ActionResult Edit(FeeViewModel fe)
+       {
+
+           try
+           {
+
+               Logic BL = new Logic();
+               BL.EditFee(fe);
+               return RedirectToAction("Index");
+           }
+           catch (Exception Ex)
+           {
+               return View();
+           }
+       }
+       public ActionResult Details(int id)
+       {
+           try
+           {
+               int fid = id;
+               Logic BL = new Logic();
+
+               return View(BL.FeeDetails(fid));
+           }
+           catch (Exception Ex)
+           {
+               return View();
            }
 
        }

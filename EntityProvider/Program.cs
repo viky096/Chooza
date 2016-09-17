@@ -20,7 +20,7 @@ namespace EntityProvider
             this.Recommendations = new HashSet<Recommendation>();
         }
     
-        public System.Guid Program_ID { get; set; }
+        public int Program_ID { get; set; }
         public string Name { get; set; }
         public string Skills_Needed { get; set; }
         public string Education_Scope { get; set; }

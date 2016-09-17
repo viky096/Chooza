@@ -459,7 +459,7 @@
     <Key>
       <PropertyRef Name="Fee_ID" />
     </Key>
-    <Property Type="Guid" Name="Fee_ID" Nullable="false" />
+    <Property Type="Int32" Name="Fee_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="String" Name="First_Sem_Fee" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Second_Onwards_Fee" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="Guid" Name="CreatedBy" />
@@ -489,7 +489,7 @@
     <Key>
       <PropertyRef Name="Program_ID" />
     </Key>
-    <Property Type="Guid" Name="Program_ID" Nullable="false" />
+    <Property Type="Int32" Name="Program_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Skills_Needed" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Education_Scope" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -508,10 +508,10 @@
     <Key>
       <PropertyRef Name="Program_Uni_ID" />
     </Key>
-    <Property Type="Guid" Name="Program_Uni_ID" Nullable="false" />
-    <Property Type="Guid" Name="Program_ID" />
-    <Property Type="Guid" Name="University_ID" />
-    <Property Type="Guid" Name="Fee_ID" />
+    <Property Type="Int32" Name="Program_Uni_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Program_ID" />
+    <Property Type="Int32" Name="University_ID" />
+    <Property Type="Int32" Name="Fee_ID" />
     <Property Type="String" Name="Admission_Criteria" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="Guid" Name="CreatedBy" />
     <Property Type="Guid" Name="UpdatedBy" />
@@ -519,6 +519,10 @@
     <Property Type="DateTime" Name="CreatedDate" Precision="3" />
     <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
     <Property Type="Guid" Name="CurrentApplicationId" />
+    <Property Type="Int32" Name="Duration" />
+    <Property Type="String" Name="HSSC_Criteria" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SSC_Criteria" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Reference" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Fee_Structure" Relationship="CHOOZAModel.requires" FromRole="Program_University" ToRole="Fee_Structure" />
     <NavigationProperty Name="Program" Relationship="CHOOZAModel.Belongs_to" FromRole="Program_University" ToRole="Program" />
     <NavigationProperty Name="University" Relationship="CHOOZAModel.Offers" FromRole="Program_University" ToRole="University" />
@@ -563,7 +567,7 @@
     </Key>
     <Property Type="Guid" Name="Recommendation_ID" Nullable="false" />
     <Property Type="Guid" Name="Result_ID" />
-    <Property Type="Guid" Name="Program_ID" />
+    <Property Type="Int32" Name="Program_ID" />
     <Property Type="Guid" Name="CreatedBy" />
     <Property Type="Guid" Name="UpdatedBy" />
     <Property Type="Boolean" Name="IsDeleted" />
@@ -641,7 +645,7 @@
     <Key>
       <PropertyRef Name="University_ID" />
     </Key>
-    <Property Type="Guid" Name="University_ID" Nullable="false" />
+    <Property Type="Int32" Name="University_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Introduction" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -655,6 +659,9 @@
     <Property Type="Guid" Name="CurrentApplicationId" />
     <Property Type="String" Name="FileName" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="ImageSize" />
+    <Property Type="String" Name="Address" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Website" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sector" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Program_University" Relationship="CHOOZAModel.Offers" FromRole="University" ToRole="Program_University" />
   </EntityType>
   <Association Name="FK_Academic_Credentials_Student">

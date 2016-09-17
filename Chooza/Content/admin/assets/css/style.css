@@ -1750,6 +1750,9 @@ Custom tables
   font-size: 14px;
   font-weight: 600;
 }
+.table td {
+    max-width:600px;
+}
 
 .table-advance {
   margin-bottom: 10px !important;

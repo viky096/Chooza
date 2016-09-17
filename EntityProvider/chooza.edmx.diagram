@@ -5,35 +5,35 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9062e1b1b3f547a69462a5f297793488" Name="Diagram1">
-        <EntityTypeShape EntityType="CHOOZAModel.Academic_Credentials" Width="1.5" PointX="4.88178398501211" PointY="29.108685939157702" />
-        <EntityTypeShape EntityType="CHOOZAModel.Answer" Width="1.5" PointX="4.9957968839424645" PointY="1.4701559103420729" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Applications" Width="1.5" PointX="3.9570890739360309" PointY="30.711069270368231" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Membership" Width="1.5" PointX="2.8115561654845047" PointY="17.223528840217519" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Paths" Width="1.5" PointX="0.99655731441292783" PointY="0.41984264572143676" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="11.608092639412774" PointY="7.1715842071788316" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="4.3236404286341932" PointY="18.073914968443063" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Profile" Width="1.5" PointX="6.20110789975203" PointY="16.726894714276725" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Roles" Width="1.5" PointX="10.61320128413532" PointY="9.1938016755477534" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_SchemaVersions" Width="1.5" PointX="11.481047222149115" PointY="24.049926485889557" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Users" Width="1.5" PointX="7.6882154269554723" PointY="17.517210759929014" />
-        <EntityTypeShape EntityType="CHOOZAModel.aspnet_WebEvent_Events" Width="1.5" PointX="3.9952345006145693" PointY="23.7242679706422" />
-        <EntityTypeShape EntityType="CHOOZAModel.Booking" Width="1.5" PointX="5.3185079681307581" PointY="12.545087149620562" />
-        <EntityTypeShape EntityType="CHOOZAModel.Category" Width="1.5" PointX="5.2730098130521412" PointY="25.882651788127912" />
-        <EntityTypeShape EntityType="CHOOZAModel.Comment" Width="1.5" PointX="3.481110621002089" PointY="17.262650885275868" />
-        <EntityTypeShape EntityType="CHOOZAModel.Counsellor" Width="1.5" PointX="6.8496367702491758" PointY="23.820030298000216" />
-        <EntityTypeShape EntityType="CHOOZAModel.Counsellor_Rating" Width="1.5" PointX="8.8379565537152622" PointY="21.125458146038213" />
-        <EntityTypeShape EntityType="CHOOZAModel.Discussion_Question" Width="1.5" PointX="3.0783761716812741" PointY="2.4047208886615565" />
-        <EntityTypeShape EntityType="CHOOZAModel.Fee_Structure" Width="1.5" PointX="10.451348572248289" PointY="31.654201969343333" />
-        <EntityTypeShape EntityType="CHOOZAModel.Option" Width="1.5" PointX="7.2451319150836824" PointY="31.437846660352239" />
-        <EntityTypeShape EntityType="CHOOZAModel.Program" Width="1.5" PointX="7.42470989908311" PointY="22.060201968094429" />
-        <EntityTypeShape EntityType="CHOOZAModel.Program_University" Width="1.5" PointX="2.2163370932528457" PointY="19.978752503161669" />
-        <EntityTypeShape EntityType="CHOOZAModel.Qualification" Width="1.5" PointX="9.13051323831571" PointY="22.153748299066791" />
-        <EntityTypeShape EntityType="CHOOZAModel.Question" Width="1.5" PointX="9.73223411372501" PointY="9.4446715160481034" />
-        <EntityTypeShape EntityType="CHOOZAModel.Recommendation" Width="1.5" PointX="1.5122090808638415" PointY="15.485190935193185" />
-        <EntityTypeShape EntityType="CHOOZAModel.Result" Width="1.5" PointX="6.4925250534399064" PointY="13.510592764946908" />
-        <EntityTypeShape EntityType="CHOOZAModel.Student" Width="1.5" PointX="1.8917524693029713" PointY="11.305773859520338" />
-        <EntityTypeShape EntityType="CHOOZAModel.Test" Width="1.5" PointX="7.3461951535875887" PointY="27.500879866769946" />
-        <EntityTypeShape EntityType="CHOOZAModel.University" Width="1.5" PointX="6.9205227265695681" PointY="21.597857053204372" />
+        <EntityTypeShape EntityType="CHOOZAModel.Academic_Credentials" Width="1.5" PointX="11.292491912512338" PointY="5.7949070212407534" />
+        <EntityTypeShape EntityType="CHOOZAModel.Answer" Width="1.5" PointX="9.0593011086151467" PointY="17.746970840611947" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Applications" Width="1.5" PointX="3.346988983148238" PointY="5.8096567717425787" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Membership" Width="1.5" PointX="6.3773027632279806" PointY="6.0021214215094787" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Paths" Width="1.5" PointX="6.313191105757463" PointY="19.967899868249848" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="7.3767025262940216" PointY="1.25282543955968" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="6.5285653539600617" PointY="15.770417250585936" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Profile" Width="1.5" PointX="3.3001862965990725" PointY="22.214796151134557" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Roles" Width="1.5" PointX="2.5596274652330333" PointY="16.79943475909505" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_SchemaVersions" Width="1.5" PointX="10.896103877060163" PointY="29.177484674927538" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_Users" Width="1.5" PointX="4.30314846350958" PointY="22.803964252958057" />
+        <EntityTypeShape EntityType="CHOOZAModel.aspnet_WebEvent_Events" Width="1.5" PointX="0.15098465799865529" PointY="30.981508343937577" />
+        <EntityTypeShape EntityType="CHOOZAModel.Booking" Width="1.5" PointX="2.5263374738983519" PointY="29.608260466534766" />
+        <EntityTypeShape EntityType="CHOOZAModel.Category" Width="1.5" PointX="9.2734841654419355" PointY="6.1952843545914087" />
+        <EntityTypeShape EntityType="CHOOZAModel.Comment" Width="1.5" PointX="6.2061836785665632" PointY="17.694936656251055" />
+        <EntityTypeShape EntityType="CHOOZAModel.Counsellor" Width="1.5" PointX="11.334344029116604" PointY="11.649457802832805" />
+        <EntityTypeShape EntityType="CHOOZAModel.Counsellor_Rating" Width="1.5" PointX="8.8753838859849541" PointY="30.747585161937206" />
+        <EntityTypeShape EntityType="CHOOZAModel.Discussion_Question" Width="1.5" PointX="1.316512322666362" PointY="19.442164832466357" />
+        <EntityTypeShape EntityType="CHOOZAModel.Fee_Structure" Width="1.5" PointX="3.8864391520090584" PointY="12.010764649142868" />
+        <EntityTypeShape EntityType="CHOOZAModel.Option" Width="1.5" PointX="6.41637084745633" PointY="1.5591518141139074" />
+        <EntityTypeShape EntityType="CHOOZAModel.Program" Width="1.5" PointX="11.451245208946636" PointY="23.085648741147317" />
+        <EntityTypeShape EntityType="CHOOZAModel.Program_University" Width="1.5" PointX="7.6130238322601773" PointY="14.743964261721803" />
+        <EntityTypeShape EntityType="CHOOZAModel.Qualification" Width="1.5" PointX="2.4119038146044609" PointY="18.284514912536608" />
+        <EntityTypeShape EntityType="CHOOZAModel.Question" Width="1.5" PointX="9.7565160960687862" PointY="7.2103536460596853" />
+        <EntityTypeShape EntityType="CHOOZAModel.Recommendation" Width="1.5" PointX="5.8305489448041419" PointY="2.9242849065569625" />
+        <EntityTypeShape EntityType="CHOOZAModel.Result" Width="1.5" PointX="5.792838371262345" PointY="26.372196284296084" />
+        <EntityTypeShape EntityType="CHOOZAModel.Student" Width="1.5" PointX="2.4246798969920165" PointY="29.644726230597463" />
+        <EntityTypeShape EntityType="CHOOZAModel.Test" Width="1.5" PointX="1.2613357292773832" PointY="7.30934751374151" />
+        <EntityTypeShape EntityType="CHOOZAModel.University" Width="1.5" PointX="2.0221054749666272" PointY="25.176627945702815" />
         <AssociationConnector Association="CHOOZAModel.FK_Academic_Credentials_Student" />
         <AssociationConnector Association="CHOOZAModel.FK_Answer_Student" />
         <AssociationConnector Association="CHOOZAModel.is_answered_as" />

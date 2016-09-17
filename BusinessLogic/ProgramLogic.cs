@@ -13,8 +13,8 @@ namespace BusinessLogic
         public bool AddProgram(ProgramViewModel program)
         {
 
-            DataAccess DA = new DataAccess(new Guid());
-            program.Id = Guid.NewGuid();
+            DataAccess DA = new DataAccess();
+          
             program.CreatedBy = CurrentUserId;
             program.UpdatedBy = CurrentUserId;
             program.CreatedDate = DateTime.Now;
@@ -30,13 +30,13 @@ namespace BusinessLogic
             return DA.DisplayProgram();
         
         }
-        public bool DeleteProgram(Guid uid)
+        public bool DeleteProgram(int uid)
         {
             DataAccess DA = new DataAccess();
             return DA.DeleteProgram(uid);
 
         }
-        public ProgramViewModel EditProgram(Guid uid)
+        public ProgramViewModel EditProgram(int uid)
         {
             DataAccess DA = new DataAccess();
             return DA.EditProgram(uid);
@@ -46,7 +46,7 @@ namespace BusinessLogic
             DataAccess DA = new DataAccess();
             return DA.EditProgram(prog);
         }
-        public ProgramViewModel ProgramDetails(Guid pid)
+        public ProgramViewModel ProgramDetails(int pid)
         {
             DataAccess DA = new DataAccess();
             return DA.ProgramDetails(pid);

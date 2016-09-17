@@ -13,8 +13,8 @@ namespace BusinessLogic
         public bool AddUniversity(UniversityViewModel university)
         {
             
-            DataAccess DA = new DataAccess(new Guid());
-            university.Id = Guid.NewGuid();
+            DataAccess DA = new DataAccess();
+            
             university.UpdatedBy = CurrentUserId;
             university.CreatedBy = CurrentUserId;
             university.CreatedDate = DateTime.Now;
@@ -28,13 +28,13 @@ namespace BusinessLogic
             DataAccess DA = new DataAccess();
             return DA.DisplayUniversity();
         }
-        public bool DeleteUniversity(Guid uid)
+        public bool DeleteUniversity(int uid)
         { 
           DataAccess DA = new DataAccess();
           return DA.DeleteUniversity(uid);
 
         }
-        public UniversityViewModel EditUniversity(Guid uid)
+        public UniversityViewModel EditUniversity(int uid)
         {
             DataAccess DA = new DataAccess();
             return DA.EditUniversity(uid);
@@ -44,7 +44,7 @@ namespace BusinessLogic
             DataAccess DA = new DataAccess();
             return DA.EditUniversity(uni);
         }
-        public UniversityViewModel UniversityDetails(Guid uid)
+        public UniversityViewModel UniversityDetails(int uid)
         {
             DataAccess DA = new DataAccess();
             return DA.UniversityDetails(uid);

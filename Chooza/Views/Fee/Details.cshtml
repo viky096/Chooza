@@ -1,0 +1,35 @@
+﻿@model Models.DatabaseModels.FeeViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+<div class="add_margin">
+
+<fieldset>
+    <legend>Fee Details</legend>
+
+    <div class="display-label">
+        <b>First Semester Fee</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstSemesterFee)
+    </div>
+
+    <div class="display-label">
+        <b>Second Semester Onward Fee</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecondSemesterOnward)
+    </div>
+
+    
+   
+    
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+</div>

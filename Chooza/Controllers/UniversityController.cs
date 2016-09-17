@@ -54,11 +54,11 @@ namespace Chooza.Controllers
             return View();
         }
         
-        public ActionResult Delete(Guid id)
+        public ActionResult Delete(int id)
         {
             try
             {
-                Guid uid = id;
+                int uid = id;
                 Logic BL = new Logic();
                 BL.DeleteUniversity(uid);
                 return RedirectToAction("Index");
@@ -68,11 +68,11 @@ namespace Chooza.Controllers
                 return View();
             }
         }
-        public ActionResult Edit(Guid id)
+        public ActionResult Edit(int id)
         {
             try
             {
-                Guid uid = id;
+                int uid = id;
                 Logic BL = new Logic();
                
                return View(BL.EditUniversity(uid));
@@ -99,11 +99,11 @@ namespace Chooza.Controllers
                 return View();
             }    
         }
-        public ActionResult Details(Guid id)
+        public ActionResult Details(int id)
         {
             try
             {
-                Guid uid = id;
+                int uid = id;
                 Logic BL = new Logic();
                
                 return View(BL.UniversityDetails(uid));

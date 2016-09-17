@@ -16,7 +16,7 @@
         @Html.HiddenFor(program => program.Id)
 
         <div class="control-label">
-            @Html.LabelFor(program => program.Name)
+             <b>Name</b>
         </div>
         <div class="controls">
             @Html.TextBoxFor(program => program.Name, new { @class = "large m-wrap" })
@@ -24,7 +24,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(program => program.SkillsNeeded)
+              <b>Skills Needed</b>
         </div>
         <div class="controls">
             @Html.TextAreaFor(program => program.SkillsNeeded, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
@@ -32,7 +32,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(program => program.EducationScope)
+              <b>Education Scope</b>
         </div>
         <div class="controls">
             @Html.TextAreaFor(program => program.EducationScope, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
@@ -40,7 +40,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(program => program.EmploymentScope)
+              <b>Employment Scope</b>
         </div>
         <div class="controls">
             @Html.TextAreaFor(program => program.EmploymentScope, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
@@ -48,7 +48,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(program => program.ProgramOverview)
+              <b>Overview</b>
         </div>
         <div class="controls">
             @Html.TextAreaFor(program =>program.ProgramOverview, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
@@ -59,7 +59,7 @@
         
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Save" class="btn" />
         </p>
     </fieldset>
 }

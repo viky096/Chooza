@@ -15,7 +15,7 @@
         <legend>Add University</legend>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.Name)
+           Name
         </div>
         <div class="controls">
             @Html.TextBoxFor(model => model.Name, new { @class = "large m-wrap" } )
@@ -24,7 +24,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.City)
+            City
         </div>
         <div class="controls">
             @Html.TextBoxFor(model => model.City,new { @class = "large m-wrap" })
@@ -32,7 +32,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.Introduction)
+          Introduction
         </div>
         <div class="controls">
             @Html.TextAreaFor(model => model.Introduction,new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
@@ -40,7 +40,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.Admission_details)
+           Admission Details
         </div>
         <div class="controls">
             @Html.TextAreaFor(model => model.Admission_details,new { @class = "span12 wysihtml5 m-wrap", @rows="6" })
@@ -48,11 +48,32 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.ImageData)
+            Image
         </div>
         <div class="controls">
             @Html.TextBoxFor(model => model.ImageData,new { @class = "large m-wrap" })
             @Html.ValidationMessageFor(model => model.ImageData)
+        </div>
+        <div class="control-label">
+           Website
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Website,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.Website)
+        </div>
+        <div class="control-label">
+            Address
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Address,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+        <div class="control-label">
+           Sector
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Sector,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.Sector)
         </div>
 
         <p>

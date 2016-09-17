@@ -13,16 +13,17 @@
 <table class="table table-bordered table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            Name
         </th>
         
         <th>
-            @Html.DisplayNameFor(model => model.ProgramOverview)
+            Overview
         </th>
         <th>Actions</th>
     </tr>
 
-@foreach (var item in ViewBag.programList) {
+@foreach (var item in ViewBag.programList)
+{
     <tr>
         <td>
             @item.Name

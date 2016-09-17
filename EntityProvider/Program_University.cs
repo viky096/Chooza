@@ -14,10 +14,10 @@ namespace EntityProvider
     
     public partial class Program_University
     {
-        public System.Guid Program_Uni_ID { get; set; }
-        public Nullable<System.Guid> Program_ID { get; set; }
-        public Nullable<System.Guid> University_ID { get; set; }
-        public Nullable<System.Guid> Fee_ID { get; set; }
+        public int Program_Uni_ID { get; set; }
+        public Nullable<int> Program_ID { get; set; }
+        public Nullable<int> University_ID { get; set; }
+        public Nullable<int> Fee_ID { get; set; }
         public string Admission_Criteria { get; set; }
         public Nullable<System.Guid> CreatedBy { get; set; }
         public Nullable<System.Guid> UpdatedBy { get; set; }
@@ -25,6 +25,10 @@ namespace EntityProvider
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public Nullable<System.Guid> CurrentApplicationId { get; set; }
+        public Nullable<int> Duration { get; set; }
+        public string HSSC_Criteria { get; set; }
+        public string SSC_Criteria { get; set; }
+        public string Reference { get; set; }
     
         public virtual Fee_Structure Fee_Structure { get; set; }
         public virtual Program Program { get; set; }

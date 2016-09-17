@@ -1,0 +1,42 @@
+﻿@model Models.DatabaseModels.FeeViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+
+<div class="add_margin">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Edit Fee Structure</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="control-label">
+            <b>First Semester FEe</b>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.FirstSemesterFee, new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.FirstSemesterFee)
+        </div>
+
+        <div class="control-label">
+           <b>Second Semester Onward Fee</b>
+        </div>
+        <div class="Controls">
+            @Html.TextBoxFor(model => model.SecondSemesterOnward, new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.SecondSemesterOnward)
+        </div>
+
+         <p>
+            <input type="submit" value="Save"  class="btn"/>
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+</div>

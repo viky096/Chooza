@@ -15,7 +15,7 @@
         <legend>Add Program</legend>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.Name)
+           <b>Name</b>
         </div>
         <div class="controls">
             @Html.TextBoxFor(model => model.Name, new { @class = "large m-wrap" })
@@ -23,7 +23,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.SkillsNeeded)
+             <b>Skills Needed</b>
         </div>
         <div class="controls">
             @Html.TextAreaFor(model => model.SkillsNeeded, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
@@ -31,7 +31,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.EducationScope)
+              <b>Education Scope</b>
         </div>
         <div class="controls">
             @Html.TextAreaFor(model => model.EducationScope, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
@@ -39,7 +39,7 @@
         </div>
 
         <div class="econtrol-label">
-            @Html.LabelFor(model => model.EmploymentScope)
+              <b>Employment Scope</b>
         </div>
         <div class="controls">
             @Html.TextAreaFor(model => model.EmploymentScope, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })
@@ -47,7 +47,7 @@
         </div>
 
         <div class="control-label">
-            @Html.LabelFor(model => model.ProgramOverview)
+             <b>Overview</b>
         </div>
         <div class="controls">
             @Html.TextAreaFor(model => model.ProgramOverview, new { @class = "span12 wysihtml5 m-wrap" , @rows="6" })

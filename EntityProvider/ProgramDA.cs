@@ -12,7 +12,7 @@ namespace EntityProvider
         public bool AddProgram(ProgramViewModel model)
         {
             Program program = new Program();
-            program.Program_ID =model.Id;
+           
             program.Name = model.Name;
             program.Skills_Needed = model.SkillsNeeded;
             program.Education_Scope = model.EducationScope;
@@ -39,14 +39,14 @@ namespace EntityProvider
             ProgramOverview=p.Program_Overview}).ToList();
             return programList;
         }
-        public bool DeleteProgram(Guid uid)
+        public bool DeleteProgram(int uid)
         {
             Program program = Programs.Find(uid);
             program.IsDeleted = true;
             return SaveChanges() > 0;
 
         }
-        public ProgramViewModel EditProgram(Guid uid)
+        public ProgramViewModel EditProgram(int uid)
         {
             ProgramViewModel program = (from p in Programs
                                               where p.Program_ID == uid
@@ -78,7 +78,7 @@ namespace EntityProvider
 
             return SaveChanges() > 0;
         }
-        public ProgramViewModel ProgramDetails(Guid pid)
+        public ProgramViewModel ProgramDetails(int pid)
         {
             ProgramViewModel program = (from p in Programs
                                               where p.Program_ID == pid

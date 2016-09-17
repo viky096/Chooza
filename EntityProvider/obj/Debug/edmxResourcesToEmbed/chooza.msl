@@ -324,6 +324,10 @@
     <EntitySetMapping Name="Program_University">
       <EntityTypeMapping TypeName="CHOOZAModel.Program_University">
         <MappingFragment StoreEntitySet="Program_University">
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="SSC_Criteria" ColumnName="SSC_Criteria" />
+          <ScalarProperty Name="HSSC_Criteria" ColumnName="HSSC_Criteria" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
           <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
           <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
           <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
@@ -440,6 +444,9 @@
     <EntitySetMapping Name="Universities">
       <EntityTypeMapping TypeName="CHOOZAModel.University">
         <MappingFragment StoreEntitySet="University">
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="ImageSize" ColumnName="ImageSize" />
           <ScalarProperty Name="FileName" ColumnName="FileName" />
           <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />

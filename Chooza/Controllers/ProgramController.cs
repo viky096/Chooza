@@ -43,13 +43,13 @@ namespace Chooza.Controllers
             }
 
         }
-        public ActionResult Delete(Guid id)
+        public ActionResult Delete(int id)
         {
             try
             {
-                Guid uid = id;
+                int pid = id;
                 Logic BL = new Logic();
-                BL.DeleteProgram(uid);
+                BL.DeleteProgram(pid);
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -57,14 +57,14 @@ namespace Chooza.Controllers
                 return View();
             }
         }
-        public ActionResult Edit(Guid id)
+        public ActionResult Edit(int id)
         {
             try
             {
-                Guid uid = id;
+                int pid = id;
                 Logic BL = new Logic();
 
-                return View(BL.EditProgram(uid));
+                return View(BL.EditProgram(pid));
             }
             catch (Exception Ex)
             {
@@ -87,11 +87,11 @@ namespace Chooza.Controllers
                 return View();
             }
         }
-        public ActionResult Details(Guid id)
+        public ActionResult Details(int id)
         {
             try
             {
-                Guid pid = id;
+                int pid = id;
                 Logic BL = new Logic();
 
                 return View(BL.ProgramDetails(pid));

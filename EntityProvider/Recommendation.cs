@@ -16,7 +16,7 @@ namespace EntityProvider
     {
         public System.Guid Recommendation_ID { get; set; }
         public Nullable<System.Guid> Result_ID { get; set; }
-        public Nullable<System.Guid> Program_ID { get; set; }
+        public Nullable<int> Program_ID { get; set; }
         public Nullable<System.Guid> CreatedBy { get; set; }
         public Nullable<System.Guid> UpdatedBy { get; set; }
         public Nullable<bool> IsDeleted { get; set; }

@@ -8,7 +8,7 @@ namespace Models.DatabaseModels
 {
     public class FeeViewModel
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string FirstSemesterFee { get; set; }
         public string SecondSemesterOnward { get; set; }
         public Guid CreatedBy { get; set; }

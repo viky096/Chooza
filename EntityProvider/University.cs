@@ -19,7 +19,7 @@ namespace EntityProvider
             this.Program_University = new HashSet<Program_University>();
         }
     
-        public System.Guid University_ID { get; set; }
+        public int University_ID { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
         public string Introduction { get; set; }
@@ -33,6 +33,9 @@ namespace EntityProvider
         public Nullable<System.Guid> CurrentApplicationId { get; set; }
         public string FileName { get; set; }
         public Nullable<int> ImageSize { get; set; }
+        public string Address { get; set; }
+        public string Website { get; set; }
+        public string Sector { get; set; }
     
         public virtual ICollection<Program_University> Program_University { get; set; }
     }

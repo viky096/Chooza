@@ -28,7 +28,25 @@
           <EntitySet Name="Fee_Structure" EntityType="CHOOZAModel.Store.Fee_Structure" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Option" EntityType="CHOOZAModel.Store.Option" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Program" EntityType="CHOOZAModel.Store.Program" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Program_University" EntityType="CHOOZAModel.Store.Program_University" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Program_University" EntityType="CHOOZAModel.Store.Program_University" store:Type="Tables" store:Schema="dbo" store:Name="Program_University">
+            <DefiningQuery>SELECT 
+      [Program_University].[Program_Uni_ID] AS [Program_Uni_ID], 
+      [Program_University].[Program_ID] AS [Program_ID], 
+      [Program_University].[University_ID] AS [University_ID], 
+      [Program_University].[Fee_ID] AS [Fee_ID], 
+      [Program_University].[Admission_Criteria] AS [Admission_Criteria], 
+      [Program_University].[CreatedBy] AS [CreatedBy], 
+      [Program_University].[UpdatedBy] AS [UpdatedBy], 
+      [Program_University].[IsDeleted] AS [IsDeleted], 
+      [Program_University].[CreatedDate] AS [CreatedDate], 
+      [Program_University].[UpdatedDate] AS [UpdatedDate], 
+      [Program_University].[CurrentApplicationId] AS [CurrentApplicationId], 
+      [Program_University].[Duration] AS [Duration], 
+      [Program_University].[HSSC_Criteria] AS [HSSC_Criteria], 
+      [Program_University].[SSC_Criteria] AS [SSC_Criteria], 
+      [Program_University].[Reference] AS [Reference]
+      FROM [dbo].[Program_University] AS [Program_University]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="Qualification" EntityType="CHOOZAModel.Store.Qualification" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Question" EntityType="CHOOZAModel.Store.Question" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Recommendation" EntityType="CHOOZAModel.Store.Recommendation" store:Type="Tables" Schema="dbo" />
@@ -440,7 +458,7 @@
           <Key>
             <PropertyRef Name="Fee_ID" />
           </Key>
-          <Property Name="Fee_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Fee_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="First_Sem_Fee" Type="varchar(max)" />
           <Property Name="Second_Onwards_Fee" Type="varchar(max)" />
           <Property Name="CreatedBy" Type="uniqueidentifier" />
@@ -468,7 +486,7 @@
           <Key>
             <PropertyRef Name="Program_ID" />
           </Key>
-          <Property Name="Program_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Program_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="varchar(max)" />
           <Property Name="Skills_Needed" Type="varchar(max)" />
           <Property Name="Education_Scope" Type="varchar(max)" />
@@ -481,14 +499,17 @@
           <Property Name="UpdatedDate" Type="datetime" />
           <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
         </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CHOOZA.dbo.Program_University' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
         <EntityType Name="Program_University">
           <Key>
             <PropertyRef Name="Program_Uni_ID" />
           </Key>
-          <Property Name="Program_Uni_ID" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Program_ID" Type="uniqueidentifier" />
-          <Property Name="University_ID" Type="uniqueidentifier" />
-          <Property Name="Fee_ID" Type="uniqueidentifier" />
+          <Property Name="Program_Uni_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Program_ID" Type="int" />
+          <Property Name="University_ID" Type="int" />
+          <Property Name="Fee_ID" Type="int" />
           <Property Name="Admission_Criteria" Type="varchar(max)" />
           <Property Name="CreatedBy" Type="uniqueidentifier" />
           <Property Name="UpdatedBy" Type="uniqueidentifier" />
@@ -496,6 +517,10 @@
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="UpdatedDate" Type="datetime" />
           <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+          <Property Name="Duration" Type="int" />
+          <Property Name="HSSC_Criteria" Type="nvarchar(max)" />
+          <Property Name="SSC_Criteria" Type="nvarchar(max)" />
+          <Property Name="Reference" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Qualification">
           <Key>
@@ -533,7 +558,7 @@
           </Key>
           <Property Name="Recommendation_ID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Result_ID" Type="uniqueidentifier" />
-          <Property Name="Program_ID" Type="uniqueidentifier" />
+          <Property Name="Program_ID" Type="int" />
           <Property Name="CreatedBy" Type="uniqueidentifier" />
           <Property Name="UpdatedBy" Type="uniqueidentifier" />
           <Property Name="IsDeleted" Type="bit" />
@@ -594,7 +619,7 @@
           <Key>
             <PropertyRef Name="University_ID" />
           </Key>
-          <Property Name="University_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="University_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="varchar(max)" />
           <Property Name="City" Type="varchar" MaxLength="50" />
           <Property Name="Introduction" Type="varchar(max)" />
@@ -608,6 +633,9 @@
           <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
           <Property Name="FileName" Type="varchar(max)" />
           <Property Name="ImageSize" Type="int" />
+          <Property Name="Address" Type="varchar(max)" />
+          <Property Name="Website" Type="varchar(max)" />
+          <Property Name="Sector" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="Belongs to">
           <End Role="Program" Type="CHOOZAModel.Store.Program" Multiplicity="0..1" />
@@ -1480,7 +1508,7 @@
           <Key>
             <PropertyRef Name="Fee_ID" />
           </Key>
-          <Property Type="Guid" Name="Fee_ID" Nullable="false" />
+          <Property Type="Int32" Name="Fee_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="First_Sem_Fee" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Second_Onwards_Fee" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="Guid" Name="CreatedBy" />
@@ -1510,7 +1538,7 @@
           <Key>
             <PropertyRef Name="Program_ID" />
           </Key>
-          <Property Type="Guid" Name="Program_ID" Nullable="false" />
+          <Property Type="Int32" Name="Program_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Skills_Needed" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Education_Scope" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -1529,10 +1557,10 @@
           <Key>
             <PropertyRef Name="Program_Uni_ID" />
           </Key>
-          <Property Type="Guid" Name="Program_Uni_ID" Nullable="false" />
-          <Property Type="Guid" Name="Program_ID" />
-          <Property Type="Guid" Name="University_ID" />
-          <Property Type="Guid" Name="Fee_ID" />
+          <Property Type="Int32" Name="Program_Uni_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Program_ID" />
+          <Property Type="Int32" Name="University_ID" />
+          <Property Type="Int32" Name="Fee_ID" />
           <Property Type="String" Name="Admission_Criteria" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="Guid" Name="CreatedBy" />
           <Property Type="Guid" Name="UpdatedBy" />
@@ -1540,6 +1568,10 @@
           <Property Type="DateTime" Name="CreatedDate" Precision="3" />
           <Property Type="DateTime" Name="UpdatedDate" Precision="3" />
           <Property Type="Guid" Name="CurrentApplicationId" />
+          <Property Type="Int32" Name="Duration" />
+          <Property Type="String" Name="HSSC_Criteria" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SSC_Criteria" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reference" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Fee_Structure" Relationship="CHOOZAModel.requires" FromRole="Program_University" ToRole="Fee_Structure" />
           <NavigationProperty Name="Program" Relationship="CHOOZAModel.Belongs_to" FromRole="Program_University" ToRole="Program" />
           <NavigationProperty Name="University" Relationship="CHOOZAModel.Offers" FromRole="Program_University" ToRole="University" />
@@ -1584,7 +1616,7 @@
           </Key>
           <Property Type="Guid" Name="Recommendation_ID" Nullable="false" />
           <Property Type="Guid" Name="Result_ID" />
-          <Property Type="Guid" Name="Program_ID" />
+          <Property Type="Int32" Name="Program_ID" />
           <Property Type="Guid" Name="CreatedBy" />
           <Property Type="Guid" Name="UpdatedBy" />
           <Property Type="Boolean" Name="IsDeleted" />
@@ -1662,7 +1694,7 @@
           <Key>
             <PropertyRef Name="University_ID" />
           </Key>
-          <Property Type="Guid" Name="University_ID" Nullable="false" />
+          <Property Type="Int32" Name="University_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Introduction" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -1676,6 +1708,9 @@
           <Property Type="Guid" Name="CurrentApplicationId" />
           <Property Type="String" Name="FileName" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="ImageSize" />
+          <Property Type="String" Name="Address" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Website" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sector" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Program_University" Relationship="CHOOZAModel.Offers" FromRole="University" ToRole="Program_University" />
         </EntityType>
         <Association Name="FK_Academic_Credentials_Student">
@@ -2395,6 +2430,10 @@
           <EntitySetMapping Name="Program_University">
             <EntityTypeMapping TypeName="CHOOZAModel.Program_University">
               <MappingFragment StoreEntitySet="Program_University">
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="SSC_Criteria" ColumnName="SSC_Criteria" />
+                <ScalarProperty Name="HSSC_Criteria" ColumnName="HSSC_Criteria" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
                 <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />
                 <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
@@ -2511,6 +2550,9 @@
           <EntitySetMapping Name="Universities">
             <EntityTypeMapping TypeName="CHOOZAModel.University">
               <MappingFragment StoreEntitySet="University">
+                <ScalarProperty Name="Sector" ColumnName="Sector" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="ImageSize" ColumnName="ImageSize" />
                 <ScalarProperty Name="FileName" ColumnName="FileName" />
                 <ScalarProperty Name="CurrentApplicationId" ColumnName="CurrentApplicationId" />

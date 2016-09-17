@@ -23,7 +23,25 @@
     <EntitySet Name="Fee_Structure" EntityType="CHOOZAModel.Store.Fee_Structure" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Option" EntityType="CHOOZAModel.Store.Option" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Program" EntityType="CHOOZAModel.Store.Program" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Program_University" EntityType="CHOOZAModel.Store.Program_University" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Program_University" EntityType="CHOOZAModel.Store.Program_University" store:Type="Tables" store:Schema="dbo" store:Name="Program_University">
+      <DefiningQuery>SELECT 
+      [Program_University].[Program_Uni_ID] AS [Program_Uni_ID], 
+      [Program_University].[Program_ID] AS [Program_ID], 
+      [Program_University].[University_ID] AS [University_ID], 
+      [Program_University].[Fee_ID] AS [Fee_ID], 
+      [Program_University].[Admission_Criteria] AS [Admission_Criteria], 
+      [Program_University].[CreatedBy] AS [CreatedBy], 
+      [Program_University].[UpdatedBy] AS [UpdatedBy], 
+      [Program_University].[IsDeleted] AS [IsDeleted], 
+      [Program_University].[CreatedDate] AS [CreatedDate], 
+      [Program_University].[UpdatedDate] AS [UpdatedDate], 
+      [Program_University].[CurrentApplicationId] AS [CurrentApplicationId], 
+      [Program_University].[Duration] AS [Duration], 
+      [Program_University].[HSSC_Criteria] AS [HSSC_Criteria], 
+      [Program_University].[SSC_Criteria] AS [SSC_Criteria], 
+      [Program_University].[Reference] AS [Reference]
+      FROM [dbo].[Program_University] AS [Program_University]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="Qualification" EntityType="CHOOZAModel.Store.Qualification" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Question" EntityType="CHOOZAModel.Store.Question" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Recommendation" EntityType="CHOOZAModel.Store.Recommendation" store:Type="Tables" Schema="dbo" />
@@ -435,7 +453,7 @@
     <Key>
       <PropertyRef Name="Fee_ID" />
     </Key>
-    <Property Name="Fee_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Fee_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="First_Sem_Fee" Type="varchar(max)" />
     <Property Name="Second_Onwards_Fee" Type="varchar(max)" />
     <Property Name="CreatedBy" Type="uniqueidentifier" />
@@ -463,7 +481,7 @@
     <Key>
       <PropertyRef Name="Program_ID" />
     </Key>
-    <Property Name="Program_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Program_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="varchar(max)" />
     <Property Name="Skills_Needed" Type="varchar(max)" />
     <Property Name="Education_Scope" Type="varchar(max)" />
@@ -476,14 +494,17 @@
     <Property Name="UpdatedDate" Type="datetime" />
     <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
   </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CHOOZA.dbo.Program_University' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
   <EntityType Name="Program_University">
     <Key>
       <PropertyRef Name="Program_Uni_ID" />
     </Key>
-    <Property Name="Program_Uni_ID" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="Program_ID" Type="uniqueidentifier" />
-    <Property Name="University_ID" Type="uniqueidentifier" />
-    <Property Name="Fee_ID" Type="uniqueidentifier" />
+    <Property Name="Program_Uni_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Program_ID" Type="int" />
+    <Property Name="University_ID" Type="int" />
+    <Property Name="Fee_ID" Type="int" />
     <Property Name="Admission_Criteria" Type="varchar(max)" />
     <Property Name="CreatedBy" Type="uniqueidentifier" />
     <Property Name="UpdatedBy" Type="uniqueidentifier" />
@@ -491,6 +512,10 @@
     <Property Name="CreatedDate" Type="datetime" />
     <Property Name="UpdatedDate" Type="datetime" />
     <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
+    <Property Name="Duration" Type="int" />
+    <Property Name="HSSC_Criteria" Type="nvarchar(max)" />
+    <Property Name="SSC_Criteria" Type="nvarchar(max)" />
+    <Property Name="Reference" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Qualification">
     <Key>
@@ -528,7 +553,7 @@
     </Key>
     <Property Name="Recommendation_ID" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Result_ID" Type="uniqueidentifier" />
-    <Property Name="Program_ID" Type="uniqueidentifier" />
+    <Property Name="Program_ID" Type="int" />
     <Property Name="CreatedBy" Type="uniqueidentifier" />
     <Property Name="UpdatedBy" Type="uniqueidentifier" />
     <Property Name="IsDeleted" Type="bit" />
@@ -589,7 +614,7 @@
     <Key>
       <PropertyRef Name="University_ID" />
     </Key>
-    <Property Name="University_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="University_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="varchar(max)" />
     <Property Name="City" Type="varchar" MaxLength="50" />
     <Property Name="Introduction" Type="varchar(max)" />
@@ -603,6 +628,9 @@
     <Property Name="CurrentApplicationId" Type="uniqueidentifier" />
     <Property Name="FileName" Type="varchar(max)" />
     <Property Name="ImageSize" Type="int" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="Website" Type="varchar(max)" />
+    <Property Name="Sector" Type="varchar" MaxLength="50" />
   </EntityType>
   <Association Name="Belongs to">
     <End Role="Program" Type="CHOOZAModel.Store.Program" Multiplicity="0..1" />

@@ -12,12 +12,15 @@ namespace EntityProvider
         public bool AddUniversity(UniversityViewModel model)
         {
             University university = new University();
-            university.University_ID = model.Id;
+            
             university.Name = model.Name;
             university.City = model.City;
             university.Introduction = model.Introduction;
             university.Admission_Details = model.Admission_details;
             university.ImageData = model.ImageData;
+            university.Website = model.Website;
+            university.Address = model.Address;
+            university.Sector = model.Sector;
             university.CreatedBy = model.CreatedBy;
             university.UpdatedBy = model.UpdatedBy;
             university.IsDeleted = model.IsDeleted;
@@ -32,7 +35,7 @@ namespace EntityProvider
         {
             List<UniversityViewModel> UniversitiesList = (from u in Universities
                                                           where (u.IsDeleted == null || u.IsDeleted == false)
-                                                          && u.CurrentApplicationId == CurrentApplicationId
+                                                          
                                                           select new UniversityViewModel
                                                           
                                                           //
@@ -52,7 +55,7 @@ namespace EntityProvider
 
         }
 
-        public bool DeleteUniversity(Guid uid)
+        public bool DeleteUniversity(int uid)
         {
             University university = Universities.Find(uid);
             university.IsDeleted = true;
@@ -60,7 +63,7 @@ namespace EntityProvider
             
         }
 
-        public UniversityViewModel EditUniversity(Guid uid)
+        public UniversityViewModel EditUniversity(int uid)
         {
             UniversityViewModel university = (from u in Universities
                                               where u.University_ID == uid
@@ -71,7 +74,10 @@ namespace EntityProvider
                                                   City = u.City,
                                                   Introduction = u.Introduction,
                                                   Admission_details = u.Admission_Details,
-                                                  ImageData = u.ImageData
+                                                  ImageData = u.ImageData,
+                                                  Website=u.Website,
+                                                  Address=u.Address,
+                                                  Sector=u.Sector
 
                                               }).SingleOrDefault();
 
@@ -89,10 +95,13 @@ namespace EntityProvider
             university.Introduction = uni.Introduction;
             university.Admission_Details = uni.Admission_details;
             university.ImageData = uni.ImageData;
+            university.Website = uni.Website;
+            university.Address = uni.Address;
+            university.Sector = uni.Sector;
             
             return SaveChanges() > 0; 
         }
-        public UniversityViewModel UniversityDetails(Guid uid)
+        public UniversityViewModel UniversityDetails(int uid)
         {
             UniversityViewModel university = (from u in Universities
                                               where u.University_ID == uid
@@ -103,7 +112,10 @@ namespace EntityProvider
                                                   City = u.City,
                                                   Introduction = u.Introduction,
                                                   Admission_details = u.Admission_Details,
-                                                  ImageData = u.ImageData
+                                                  ImageData = u.ImageData,
+                                                  Website=u.Website,
+                                                  Address=u.Address,
+                                                  Sector=u.Sector
 
                                               }).SingleOrDefault();
             return university;

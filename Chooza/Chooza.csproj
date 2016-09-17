@@ -1469,6 +1469,9 @@
     <Content Include="Views\Program\Edit.cshtml" />
     <Content Include="Views\Program\Details.cshtml" />
     <Content Include="Views\Fee\Create.cshtml" />
+    <Content Include="Views\Fee\Index.cshtml" />
+    <Content Include="Views\Fee\Edit.cshtml" />
+    <Content Include="Views\Fee\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

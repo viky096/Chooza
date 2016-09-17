@@ -9,7 +9,7 @@ namespace Models.DatabaseModels
 {
     public class UniversityViewModel
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
         public string Introduction { get; set; }
@@ -17,13 +17,14 @@ namespace Models.DatabaseModels
         public byte[] ImageData { get; set; }
         public string FileName { get; set; }
         public int ImageSize { get; set; }
-       
-
         public Guid CreatedBy { get; set; }
         public Guid UpdatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
         public bool IsDeleted { get; set; }
         public Guid CurrentApplicationId  { get; set; }
+        public string Website { get; set; }
+        public string Address { get; set; }
+        public string Sector { get; set; }
     }
 }

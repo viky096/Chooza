@@ -1,4 +1,4 @@
-﻿@model EntityProvider.Fee_Structure
+﻿@model Models.DatabaseModels.FeeViewModel
 
 @{
     ViewBag.Title = "Create";
@@ -15,23 +15,23 @@
        
 
         <div class="control-label">
-            @Html.LabelFor(model => model.First_Sem_Fee)
+            <b>First Semster Fee</b>
         </div>
         <div class="controls">
-            @Html>TextBoxFor(model => model.First_Sem_Fee)
-            @Html.ValidationMessageFor(model => model.First_Sem_Fee)
+            @Html.TextBoxFor(model => model.FirstSemesterFee,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.FirstSemesterFee )
         </div>
 
         <div class="control-label">
-             @Html.LabelFor(model => model.Second_Onwards_Fee)
+            <b>Second Semster Onward Fee</b>
         </div>
         <div class="controls">
-            @Html.TextBoxFor(model => model.Second_Onwards_Fee,new { @class = "large m-wrap" })
-            @Html.ValidationMessageFor(model => model.Second_Onwards_Fee)
+            @Html.TextBoxFor(model => model.SecondSemesterOnward,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.SecondSemesterOnward )
         </div>
 
        <p>
-            <input type="submit" value="Add" />
+            <input type="submit" value="Add" class="btn blue" />
         </p>
     </fieldset>
 }
