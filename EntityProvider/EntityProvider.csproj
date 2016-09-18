@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -140,6 +141,7 @@
     <Compile Include="Question.cs">
       <DependentUpon>chooza.tt</DependentUpon>
     </Compile>
+    <Compile Include="QuestionDA.cs" />
     <Compile Include="Recommendation.cs">
       <DependentUpon>chooza.tt</DependentUpon>
     </Compile>
@@ -152,6 +154,7 @@
     <Compile Include="Test.cs">
       <DependentUpon>chooza.tt</DependentUpon>
     </Compile>
+    <Compile Include="TestDA.cs" />
     <Compile Include="University.cs">
       <DependentUpon>chooza.tt</DependentUpon>
     </Compile>
@@ -196,6 +199,9 @@
       <Project>{e56c1818-a9ed-44b9-8434-2b9e73a92335}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

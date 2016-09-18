@@ -1,0 +1,36 @@
+﻿@model Models.DatabaseModels.TestViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+<div class="add_margin">
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Add Test</legend>
+
+        <div class="control-label">
+           Test Type
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Type,new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.Type)
+        </div>
+
+        
+        
+
+        <p>
+            <input type="submit" value="Add" class="btn" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+</div>

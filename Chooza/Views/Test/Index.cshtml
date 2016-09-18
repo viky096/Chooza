@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Models.DatabaseModels.TestViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+<div class="add_margin">
+<br />
+<p>
+    @Html.ActionLink("Add New Test", "Create",  new Object { },  new { @class = "btn" })
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+           Test Type
+        </th>
+       <th>
+           Actions
+       </th>
+    </tr>
+
+@foreach (var item in ViewBag.TestList)
+{
+    <tr>
+        <td>
+            @item.Type
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit",new { id=@item.Id},new { @class = "btn mini purple" }) |
+            @Html.ActionLink("Details", "Details", new { id=@item.Id },new { @class = "btn mini black" })|
+            @Html.ActionLink("Delete", "Delete", new { id=@item.Id },new { @class = "btn mini blue" })
+        </td>
+    </tr>
+}
+
+</table>
+</div>

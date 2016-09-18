@@ -1,6 +1,8 @@
 ﻿using Models.DatabaseModels;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +19,7 @@ namespace EntityProvider
             university.City = model.City;
             university.Introduction = model.Introduction;
             university.Admission_Details = model.Admission_details;
-            university.ImageData = model.ImageData;
+            //university.ImageData = model.ImageData;
             university.Website = model.Website;
             university.Address = model.Address;
             university.Sector = model.Sector;
@@ -27,6 +29,20 @@ namespace EntityProvider
             university.CreatedDate = model.CreatedDate;
             university.UpdatedDate = model.UpdatedDate;
             university.CurrentApplicationId = model.CurrentApplicationId;
+            if (model.IsLogoUploaded && (!string.IsNullOrEmpty(model.ServerProductLogoPath)))
+            {
+                 university.FileName = model.ServerProductLogoPath;
+                //university.LogoType = model.LogoType;
+                System.IO.FileInfo file = new System.IO.FileInfo(model.ServerProductLogoPath);
+                file.Directory.Create(); // If the directory already exists, this method does nothing.
+                if (File.Exists(model.ServerProductLogoPath))
+                {
+                    File.Delete(model.ServerProductLogoPath);
+                }
+                MemoryStream ms = new MemoryStream(model.ImageData);
+                Image universityLogo = Image.FromStream(ms);
+                universityLogo.Save(model.ServerProductLogoPath);
+            }
             Universities.Add(university);
             return SaveChanges() > 0;
 

@@ -16,6 +16,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
+    @System.Web.Optimization.Styles.Render("~/Content/admin/assets/select2/select2.css")
+  
 	@System.Web.Optimization.Styles.Render("~/Content/admin/assets/bootstrap/css/bootstrap.min.css")
 	@System.Web.Optimization.Styles.Render("~/Content/admin/assets/css/metro.css")
 	@System.Web.Optimization.Styles.Render("~/Content/admin/assets/bootstrap/css/bootstrap-responsive.min.css")
@@ -438,7 +440,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 	<!--[if lt IE 9]>
 	<script src="assets/js/excanvas.js"></script>
 	<script src="assets/js/respond.js"></script>	
-	<![endif]-->	
+	<![endif]-->
+    @System.Web.Optimization.Scripts.Render("~/Content/admin/assets/select2/select2.js")	
 	@System.Web.Optimization.Scripts.Render("~/Content/admin/assets/breakpoints/breakpoints.js")	
 	@System.Web.Optimization.Scripts.Render("~/Content/admin/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js")	
 	@System.Web.Optimization.Scripts.Render("~/Content/admin/assets/jquery-slimscroll/jquery.slimscroll.min.js")

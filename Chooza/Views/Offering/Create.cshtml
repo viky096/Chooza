@@ -1,0 +1,71 @@
+﻿@model Models.DatabaseModels.OfferingViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+<div class="add_margin">
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Add Offerings</legend>
+        <div class="control-label">
+            Select University
+        </div>
+        <div class="controls">
+            @Html.DropDownList("UniList1",ViewBag.UniversityList as SelectList, "Please select University",new { @class = "span12 chosen" } )
+        </div>
+        <div class="control-label">
+            Select Program
+        </div>
+        <div class="controls">
+            @Html.DropDownList("ProgList1",ViewBag.ProgramList as SelectList, "Please select Program" ,new { @class = "span12 chosen" } )
+        </div>
+        <div class="control-label">
+            Duration
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Duration,new { @class = "m-wrap span12" })
+            @Html.ValidationMessageFor(model => model.Duration)
+        </div>
+
+        <div class="control-label">
+           HSSC Criteria
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(model => model.HSSC_Criteria,new { @class = "span12 wysihtml5 m-wrap", @rows="6" })
+            @Html.ValidationMessageFor(model => model.HSSC_Criteria)
+        </div>
+
+        <div class="control-label">
+           SSC Criteria
+        </div>
+        <div class="controls">
+            @Html.TextAreaFor(model => model.SSC_Criteria, new { @class = "span12 wysihtml5 m-wrap", @rows="6" })
+            @Html.ValidationMessageFor(model => model.SSC_Criteria)
+        </div>
+
+        <div class="control-label">
+           Reference
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Reference,new { @class = "m-wrap span12" })
+            @Html.ValidationMessageFor(model => model.Reference)
+        </div>
+
+        
+        
+
+        <p>
+            <input type="submit" value="Add" class="btn" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+</div>

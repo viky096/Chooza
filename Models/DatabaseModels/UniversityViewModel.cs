@@ -14,6 +14,8 @@ namespace Models.DatabaseModels
         public string City { get; set; }
         public string Introduction { get; set; }
         public string Admission_details { get; set; }
+        public bool IsLogoUploaded {get;set;}
+        public string ServerProductLogoPath { get; set; }
         public byte[] ImageData { get; set; }
         public string FileName { get; set; }
         public int ImageSize { get; set; }

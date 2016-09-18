@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Drawing;
+using System.Configuration;
+using Helpers;
 
 namespace Chooza.Controllers
 {
@@ -30,6 +33,7 @@ namespace Chooza.Controllers
         [HttpGet]
         public ActionResult Create()
         {
+            
             UniversityViewModel model = new UniversityViewModel();
             return View(model);
         }
@@ -38,6 +42,27 @@ namespace Chooza.Controllers
         {
             try
             {
+                if (HttpContext.Request.Files.AllKeys.Any())
+                {
+                    // Get the uploaded image from the Files collection
+                    HttpPostedFileBase uploadedImage = HttpContext.Request.Files["FileName"];
+                    if (uploadedImage != null)
+                    {
+                        // if (Image.FromStream(uploadedImage.InputStream).Width < 300 && Image.FromStream(uploadedImage.InputStream).Height < 300)
+                        {
+                            model.ImageData = Image.FromStream(uploadedImage.InputStream).ToByteArray();
+                            model.ServerProductLogoPath = ConfigurationManager.AppSettings["UniversityPicturePath"] +
+                            ConfigurationManager.AppSettings["ApplicationId"] +
+                                "\\" + "abc";
+
+                            model.IsLogoUploaded = true;
+                        }
+                        //else
+                        //{
+                        //    return Json(new { Success = false, Message = "Image width and height can not be greater than 300." });
+                        //}
+                    }
+                }
                 Logic BL = new Logic(new Guid());
                 bool result = BL.AddUniversity(model);
 

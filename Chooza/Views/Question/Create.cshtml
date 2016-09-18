@@ -1,0 +1,42 @@
+﻿@model Models.DatabaseModels.QuestionViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Content/admin/_Layout.cshtml";
+}
+
+<div class="add_margin">
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Add Questions</legend>
+
+        <div class="control-label">
+            Statement
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Statement, new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.Statement)
+        </div>
+        <div class="control-label">
+            Result
+        </div>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Result, new { @class = "large m-wrap" })
+            @Html.ValidationMessageFor(model => model.Result)
+        </div>
+
+
+       
+        <p>
+            <input type="submit" value="Add" class="btn" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+</div>

@@ -8,7 +8,8 @@
 <br />
 
 <div class="add_margin">
-@using (Html.BeginForm()) {
+@using (Html.BeginForm("Create", "University", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
     @Html.ValidationSummary(true)
 
     <fieldset>
@@ -51,8 +52,8 @@
             Image
         </div>
         <div class="controls">
-            @Html.TextBoxFor(model => model.ImageData,new { @class = "large m-wrap" })
-            @Html.ValidationMessageFor(model => model.ImageData)
+            @Html.TextBoxFor(model => model.FileName,new { type = "file" })
+            @Html.ValidationMessageFor(model => model.FileName)
         </div>
         <div class="control-label">
            Website
@@ -74,6 +75,13 @@
         <div class="controls">
             @Html.TextBoxFor(model => model.Sector,new { @class = "large m-wrap" })
             @Html.ValidationMessageFor(model => model.Sector)
+        </div>
+        <div class="control-label">
+           Programs
+        </div>
+        <div class="controls">
+            @Html.ListBox("Programs")
+            
         </div>
 
         <p>
